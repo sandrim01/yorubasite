@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine - Yorùbá History Channel</title>
+    <link rel="stylesheet" href="vitrine-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo-yoruba.png" alt="Yorùbá History Channel" class="logo-image">
+                <h1 class="logo-text">Yorùbá History Channel</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Página Principal</a>
+                <a href="#livros" class="nav-link">Livros</a>
+                <a href="#combos" class="nav-link">Combos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">📚 Biblioteca Yorùbá</h1>
+            <p class="hero-subtitle">Explore nossa coleção completa de livros e combos especiais</p>
+        </div>
+    </section>
+
+    <!-- Livros Section -->
+    <section class="produtos" id="livros">
+        <div class="container">
+            <h2 class="section-title">📖 Livros Individuais</h2>
+            <div class="produtos-grid">
+                <!-- Livro 1: Yorùbá Descomplicado -->
+                <div class="produto-card" data-produto="yoruba">
+                    <div class="produto-image">
+                        <img src="livro_yoruba.png" alt="Yorùbá Descomplicado">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Yorùbá Descomplicado</h3>
+                        <p class="produto-preco">R$ 39,99</p>
+                        <div class="produto-badges">
+                            <span class="badge">Mais Vendido</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Livro 2: Aprendendo a Jogar Obì -->
+                <div class="produto-card" data-produto="obi">
+                    <div class="produto-image">
+                        <img src="livro_obi.png" alt="Aprendendo a Jogar Obì">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Aprendendo a Jogar Obì</h3>
+                        <p class="produto-preco">R$ 29,99</p>
+                    </div>
+                </div>
+
+                <!-- Livro 3: Èwé Òró I -->
+                <div class="produto-card" data-produto="ewe">
+                    <div class="produto-image">
+                        <img src="livro_eweoro.png" alt="Èwé Òró I">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Èwé Òró I</h3>
+                        <p class="produto-preco">R$ 29,99</p>
+                    </div>
+                </div>
+
+                <!-- Livro 4: Ilú Odára -->
+                <div class="produto-card" data-produto="ilu">
+                    <div class="produto-image">
+                        <img src="ilu odara folha.png" alt="Ilú Odára">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Ilú Odára</h3>
+                        <p class="produto-preco">R$ 24,99</p>
+                    </div>
+                </div>
+
+                <!-- Livro 5: Odù no Èrìndílógún -->
+                <div class="produto-card" data-produto="odu">
+                    <div class="produto-image">
+                        <img src="livro_odus.jpg" alt="Odù no Èrìndílógún">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Odù no Èrìndílógún</h3>
+                        <p class="produto-preco">R$ 34,99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combos Section -->
+    <section class="produtos combos-section" id="combos">
+        <div class="container">
+            <h2 class="section-title">🎁 Combos Especiais</h2>
+            <div class="produtos-grid">
+                <!-- Combo Sagrado -->
+                <div class="produto-card combo-card" data-produto="combo-sagrado">
+                    <div class="produto-image">
+                        <img src="combo_oraculo.png" alt="Combo Sagrado">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Combo Sagrado</h3>
+                        <p class="produto-preco">R$ 89,99</p>
+                        <div class="produto-badges">
+                            <span class="badge popular">Mais Popular</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo Completo -->
+                <div class="produto-card combo-card" data-produto="combo-completo">
+                    <div class="produto-image">
+                        <img src="combo_geral.png" alt="Combo Completo">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Combo Completo</h3>
+                        <p class="produto-preco">R$ 139,99</p>
+                        <div class="produto-badges">
+                            <span class="badge premium">Premium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo Oráculo -->
+                <div class="produto-card combo-card" data-produto="combo-oraculo">
+                    <div class="produto-image">
+                        <img src="combo.png" alt="Combo Oráculo">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Combo Oráculo</h3>
+                        <p class="produto-preco">R$ 59,99</p>
+                        <div class="produto-badges">
+                            <span class="badge economico">Econômico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="produto-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-titulo"></h2>
+                    <p id="modal-preco"></p>
+                    <div id="modal-badges"></div>
+                    <div class="modal-descricao">
+                        <p id="modal-descricao-texto"></p>
+                    </div>
+                    <div class="modal-detalhes">
+                        <div class="modal-destaques" id="modal-destaques"></div>
+                        <div class="modal-dados" id="modal-dados"></div>
+                    </div>
+                    <div class="modal-acoes">
+                        <a id="modal-btn-comprar" href="#" class="btn-comprar">
+                            <i class="fas fa-shopping-cart"></i>
+                            Comprar Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 Yorùbá History Channel. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Página Principal</a>
+                    <a href="#" class="footer-link">Termos de Uso</a>
+                    <a href="#" class="footer-link">Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vitrine-script.js"></script>
+</body>
+</html>
