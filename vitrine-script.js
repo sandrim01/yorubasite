@@ -183,6 +183,7 @@ const modalOverlay = document.getElementById('modal-overlay');
 const modalClose = document.getElementById('modal-close');
 const modalImg = document.getElementById('modal-img');
 const modalTitulo = document.getElementById('modal-titulo');
+const modalTituloHeader = document.getElementById('modal-titulo-header');
 const modalPreco = document.getElementById('modal-preco');
 const modalBadges = document.getElementById('modal-badges');
 const modalDescricao = document.getElementById('modal-descricao-texto');
@@ -199,6 +200,7 @@ function abrirModal(produtoId) {
     modalImg.src = produto.imagem;
     modalImg.alt = produto.titulo;
     modalTitulo.textContent = produto.titulo;
+    modalTituloHeader.textContent = produto.titulo;
     modalPreco.textContent = produto.preco;
     modalDescricao.textContent = produto.descricao;
     modalBtnComprar.href = produto.linkCompra;
