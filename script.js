@@ -122,15 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                 const currentScroll = window.pageYOffset;
                                 const targetPosition = currentScroll + scrollAmount;
                                 
-                                // Debug log para verificar a navegação
-                                console.log(`Navegando para centro da imagem: ${targetId}`);
-                                console.log(`- Posição atual da imagem no viewport: ${imgTopInViewport}px`);
-                                console.log(`- Altura da imagem: ${imgHeight}px`);
-                                console.log(`- Centro da imagem: ${imgCenter}px`);
-                                console.log(`- Centro do viewport: ${viewportCenter}px`);
-                                console.log(`- Scroll necessário: ${scrollAmount}px`);
-                                console.log(`- Posição final: ${targetPosition}px`);
-                                
                                 // Scroll suave para o centro exato da imagem
                                 window.scrollTo({
                                     top: Math.max(0, targetPosition),
@@ -160,9 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Para outras seções, scroll normal
                         const extraOffset = isMobile ? 20 : 30;
                         const targetPosition = targetElement.offsetTop - headerHeight - extraOffset;
-                        
-                        // Debug log para verificar a navegação
-                        console.log(`Navegando para: ${targetId}, Posição: ${targetPosition}`);
                         
                         // Scroll suave
                         window.scrollTo({
@@ -203,36 +191,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Adiciona classe active ao item clicado
         if (clickedItem) {
             clickedItem.classList.add('active');
-            console.log(`Item ativo atualizado: ${clickedItem.textContent}`);
         }
     }
     
     // Função de debug para verificar correspondência entre links e seções
-    function debugNavigation() {
-        console.log('=== DEBUG NAVEGAÇÃO ===');
-        document.querySelectorAll('.book-nav-item').forEach(item => {
-            const href = item.getAttribute('href');
-            const targetElement = document.querySelector(href);
-            console.log(`Link: "${item.textContent}" -> ${href} | Elemento encontrado: ${!!targetElement}`);
-            if (targetElement) {
-                // Para elementos de imagem, busca o título na seção pai
-                if (href.startsWith('#img-')) {
-                    const parentSection = targetElement.closest('.livro-card');
-                    const titulo = parentSection?.querySelector('.livro-title')?.textContent;
-                    console.log(`  Título da seção: "${titulo}"`);
-                    console.log(`  Tipo: Imagem do livro`);
-                } else {
-                    const titulo = targetElement.querySelector('.livro-title')?.textContent;
-                    console.log(`  Título da seção: "${titulo}"`);
-                    console.log(`  Tipo: Seção completa`);
-                }
-            }
-        });
-        console.log('=====================');
-    }
-    
-    // Executar debug na inicialização
-    debugNavigation();
+    // (Removida para produção)
     
     // Adiciona efeitos interativos aos botões de navegação
     document.querySelectorAll('.book-nav-item').forEach(item => {
@@ -313,8 +276,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (correspondingNavItem) {
-                // Debug log para verificar detecção correta
-                console.log(`Seção ativa detectada: ${id} -> Link: ${correspondingNavItem.getAttribute('href')} (${correspondingNavItem.textContent})`);
                 updateActiveNavItem(correspondingNavItem);
             }
         }
@@ -382,7 +343,6 @@ document.addEventListener('DOMContentLoaded', function() {
         botoesCompra.forEach(botao => {
             botao.addEventListener('click', function(e) {
                 // Aqui você pode adicionar tracking analytics
-                console.log('Clique no botão de compra:', this.textContent.trim());
                 
                 // Simula carregamento
                 const originalText = this.innerHTML;
@@ -435,7 +395,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Verifica se é mobile
         if (window.innerWidth <= 768) {
             // Adiciona funcionalidade mobile se necessário
-            console.log('Versão mobile detectada');
         }
     }
     
@@ -454,13 +413,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    console.log('🚀 Landing page carregada com sucesso!');
 });
 
 // Função para integração com analytics (Google Analytics, Facebook Pixel, etc.)
 function trackEvent(action, category, label) {
-    // Exemplo de tracking
-    console.log('Evento rastreado:', { action, category, label });
+    // Tracking removido para produção
     
     // Integração com Google Analytics (se configurado)
     if (typeof gtag !== 'undefined') {
@@ -572,13 +529,10 @@ if ('IntersectionObserver' in window) {
     // Botão Voltar ao Topo
     const backToTopBtn = document.getElementById('back-to-top');
     
-    console.log('Botão encontrado:', backToTopBtn); // Debug
-    
     if (backToTopBtn) {
         // Mostrar/ocultar botão baseado no scroll
         function toggleBackToTop() {
             const scrollY = window.pageYOffset;
-            console.log('Scroll atual:', scrollY); // Debug
             
             if (scrollY > 50) {
                 backToTopBtn.classList.add('visible');
@@ -586,7 +540,6 @@ if ('IntersectionObserver' in window) {
                 backToTopBtn.style.opacity = '1';
                 backToTopBtn.style.visibility = 'visible';
                 backToTopBtn.style.transform = 'translateY(0)';
-                console.log('Botão deve estar visível'); // Debug
             } else {
                 // Só remove se estiver realmente no topo (menos de 30px)
                 if (scrollY < 30) {
@@ -594,7 +547,6 @@ if ('IntersectionObserver' in window) {
                     backToTopBtn.style.opacity = '0';
                     backToTopBtn.style.visibility = 'hidden';
                     backToTopBtn.style.transform = 'translateY(100px)';
-                    console.log('Botão deve estar oculto'); // Debug
                 }
             }
         }
@@ -637,13 +589,11 @@ if ('IntersectionObserver' in window) {
         
         // Forçar verificação após um pequeno delay
         setTimeout(() => {
-            console.log('Verificação forçada após delay');
             toggleBackToTop();
             
             // Proteção: verificar a cada 2 segundos se o botão ainda está visível
             setInterval(() => {
                 if (window.pageYOffset > 50 && !backToTopBtn.classList.contains('visible')) {
-                    console.log('Reforçando visibilidade do botão');
                     backToTopBtn.classList.add('visible');
                     backToTopBtn.style.opacity = '1';
                     backToTopBtn.style.visibility = 'visible';
@@ -651,8 +601,6 @@ if ('IntersectionObserver' in window) {
                 }
             }, 2000);
         }, 1000);
-    } else {
-        console.error('Botão back-to-top não encontrado no DOM!');
     }
 
     // Função throttle para otimizar performance do scroll

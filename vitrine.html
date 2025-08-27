@@ -103,7 +103,7 @@
                 <!-- Livro 1: Yorùbá Descomplicado -->
                 <div class="produto-card" data-produto="yoruba">
                     <div class="produto-image">
-                        <img src="livro_yoruba.png" alt="Yorùbá Descomplicado" style="width:auto; height:auto; max-width:100%; max-height:220px; object-fit:contain;">
+                        <img src="livro_yoruba.png" alt="Yorùbá Descomplicado" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Ver Detalhes</button>
                         </div>
@@ -118,7 +118,7 @@
                 <!-- Livro 2: Aprendendo a Jogar Obì -->
                 <div class="produto-card" data-produto="obi">
                     <div class="produto-image">
-                        <img src="livro_obi.png" alt="Aprendendo a Jogar Obì" style="width:auto; height:auto; max-width:100%; max-height:220px; object-fit:contain;">
+                        <img src="livro_obi.png" alt="Aprendendo a Jogar Obì" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Ver Detalhes</button>
                         </div>
@@ -132,7 +132,7 @@
                 <!-- Livro 3: Èwé Òró I -->
                 <div class="produto-card" data-produto="ewe">
                     <div class="produto-image">
-                        <img src="livro_eweoro.png" alt="Èwé Òró I" style="width:auto; height:auto; max-width:100%; max-height:220px; object-fit:contain;">
+                        <img src="livro_eweoro.png" alt="Èwé Òró I" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Ver Detalhes</button>
                         </div>
@@ -146,7 +146,7 @@
                 <!-- Livro 4: Ilú Odára -->
                 <div class="produto-card" data-produto="ilu">
                     <div class="produto-image">
-                        <img src="ilu odara folha.png" alt="Ilú Odára" style="width:auto; height:auto; max-width:100%; max-height:220px; object-fit:contain;">
+                        <img src="ilu odara folha.png" alt="Ilú Odára" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Ver Detalhes</button>
                         </div>
@@ -160,7 +160,7 @@
                 <!-- Livro 5: Odù no Èrìndílógún -->
                 <div class="produto-card" data-produto="odu">
                     <div class="produto-image">
-                        <img src="livro_odus.jpg" alt="Odù no Èrìndílógún" style="width:auto; height:auto; max-width:100%; max-height:220px; object-fit:contain;">
+                        <img src="livro_odus.jpg" alt="Odù no Èrìndílógún" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Ver Detalhes</button>
                         </div>
@@ -182,7 +182,7 @@
                 <!-- Combo Sagrado -->
                 <div class="produto-card combo-card" data-produto="combo-sagrado">
                     <div class="produto-image">
-                        <img src="combo_oraculo.png" alt="Combo Sagrado" style="width:auto; height:auto; max-width:100%; max-height:220px; object-fit:contain;">
+                        <img src="combo_oraculo.png" alt="Combo Sagrado" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Ver Detalhes</button>
                         </div>
@@ -199,7 +199,7 @@
                 <!-- Combo Completo -->
                 <div class="produto-card combo-card" data-produto="combo-completo">
                     <div class="produto-image">
-                        <img src="combo_geral.png" alt="Combo Completo" style="width:auto; height:auto; max-width:100%; max-height:220px; object-fit:contain;">
+                        <img src="combo_geral.png" alt="Combo Completo" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Ver Detalhes</button>
                         </div>
@@ -216,7 +216,7 @@
                 <!-- Combo Oráculo -->
                 <div class="produto-card combo-card" data-produto="combo-oraculo">
                     <div class="produto-image">
-                        <img src="combo.png" alt="Combo Oráculo" style="width:auto; height:auto; max-width:100%; max-height:220px; object-fit:contain;">
+                        <img src="combo.png" alt="Combo Oráculo" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Ver Detalhes</button>
                         </div>
@@ -250,20 +250,34 @@
                 </div>
                 <div class="modal-info">
                     <h3 id="modal-titulo"></h3>
-                    <p id="modal-preco"></p>
                     <div id="modal-badges"></div>
+                    
+                    <!-- Botões de compra logo após o título -->
+                    <div class="modal-acoes">
+                        <div class="botoes-compra">
+                            <div class="opcao-compra">
+                                <div class="preco-botao" id="preco-ebook">R$ 29,99</div>
+                                <a id="modal-btn-ebook" href="#" class="btn-comprar btn-ebook">
+                                    <i class="fas fa-download"></i>
+                                    E-book Digital
+                                </a>
+                            </div>
+                            <div class="opcao-compra">
+                                <div class="preco-botao" id="preco-fisico">R$ 39,99</div>
+                                <a id="modal-btn-fisico" href="#" class="btn-comprar btn-fisico">
+                                    <i class="fas fa-book"></i>
+                                    Livro Físico
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="modal-descricao">
                         <p id="modal-descricao-texto"></p>
                     </div>
                     <div class="modal-detalhes">
                         <div class="modal-destaques" id="modal-destaques"></div>
                         <div class="modal-dados" id="modal-dados"></div>
-                    </div>
-                    <div class="modal-acoes">
-                        <a id="modal-btn-comprar" href="#" class="btn-comprar">
-                            <i class="fas fa-shopping-cart"></i>
-                            Comprar Agora
-                        </a>
                     </div>
                 </div>
             </div>
@@ -311,7 +325,7 @@
             <h2 class="section-title">Conheça Melhor Quem Criou o Conteúdo</h2>
             <div class="autor-card">
                 <div class="autor-image">
-                    <img src="autor.png" alt="Foto do Bàbá Akindele">
+                    <img src="autor.png" alt="Foto do Bàbá Akindele" loading="lazy">
                 </div>
                 <div class="autor-info">
                     <h3 class="autor-nome">Bàbá Akindele</h3>
@@ -428,13 +442,13 @@
                         <a href="mailto:yoruba.hc.oficial@gmail.com" class="social-link email" title="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://www.instagram.com/yoruba_historychannel/" target="_blank" class="social-link instagram" title="Instagram">
+                        <a href="https://www.instagram.com/yoruba_historychannel/" target="_blank" rel="noopener noreferrer" class="social-link instagram" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.youtube.com/@Yoruba_History_Channel" target="_blank" class="social-link youtube" title="YouTube">
+                        <a href="https://www.youtube.com/@Yoruba_History_Channel" target="_blank" rel="noopener noreferrer" class="social-link youtube" title="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@yoruba_history_channel" target="_blank" class="social-link tiktok" title="TikTok">
+                        <a href="https://www.tiktok.com/@yoruba_history_channel" target="_blank" rel="noopener noreferrer" class="social-link tiktok" title="TikTok">
                             <i class="fab fa-tiktok"></i>
                         </a>
                     </div>

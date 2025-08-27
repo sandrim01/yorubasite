@@ -3,8 +3,10 @@ const produtos = {
     yoruba: {
         titulo: "Yorùbá Descomplicado",
         preco: "R$ 39,99",
+        precoEbook: "R$ 39,99",
+        precoFisico: "R$ 89,99",
         imagem: "livro_yoruba.png",
-        badges: ['Mais Vendido'],
+        badges: [],
         descricao: "Um guia completo e prático para aprender o idioma Yorùbá. Este guia é um portal linguístico que desvenda os segredos milenares de uma língua viva, pulsante nos terreiros e no coração da diáspora africana. Aprenda a pronúncia correta, tons sagrados e vocabulário ritualístico do Candomblé.",
         destaques: [
             "Pronúncia correta e tons sagrados",
@@ -13,17 +15,21 @@ const produtos = {
             "Oríkìs e participação nos rituais"
         ],
         dados: {
-            "Autor": "Yorùbá History Channel",
+            "Autor": "Bàbá Akindele",
             "Editora": "Yorùbá History Channel",
             "Ano": "2025",
             "Formato": "Digital (PDF) / Físico",
             "Páginas": "120"
         },
-        linkCompra: "https://pay.hotmart.com/R92825700A?checkoutMode=10"
+        linkCompra: "https://pay.hotmart.com/T100535056L",
+        linkEbook: "https://pay.hotmart.com/T100535056L",
+        linkFisico: "https://pay.hotmart.com/K101000829W"
     },
     obi: {
         titulo: "Aprendendo a Jogar Obì",
         preco: "R$ 29,99",
+        precoEbook: "R$ 29,99",
+        precoFisico: "R$ 69,99",
         imagem: "livro_obi.png",
         badges: [],
         descricao: "Neste guia essencial, Bàbá Akindele ensina de forma prática como jogar, interpretar e cuidar do Obì – um dos oráculos mais antigos e respeitados no culto aos Òrìṣà. O livro apresenta as formas de jogo, tipos de Obì, invocações, oríkì, interpretações e cuidados rituais.",
@@ -39,11 +45,15 @@ const produtos = {
             "Formato": "Digital (PDF)",
             "Páginas": "80"
         },
-        linkCompra: "https://pay.hotmart.com/R92825700A?checkoutMode=10"
+        linkCompra: "https://pay.hotmart.com/O100753793W",
+        linkEbook: "https://pay.hotmart.com/O100753793W",
+        linkFisico: "https://pay.hotmart.com/R101026610B"
     },
     ewe: {
         titulo: "Èwé Òró I",
         preco: "R$ 29,99",
+        precoEbook: "R$ 29,99",
+        precoFisico: "R$ 69,99",
         imagem: "livro_eweoro.png",
         badges: [],
         descricao: "Uma enciclopédia completa das plantas usadas nos terreiros, com seus nomes em yorùbá, usos ritualísticos e fundamentos.",
@@ -55,17 +65,21 @@ const produtos = {
             "Essencial para quem trabalha com axé"
         ],
         dados: {
-            "Autor": "Yorùbá History Channel",
+            "Autor": "Bàbá Akindele",
             "Editora": "Yorùbá History Channel",
             "Ano": "2025",
             "Formato": "Digital (PDF)",
             "Páginas": "95"
         },
-        linkCompra: "https://pay.hotmart.com/R92825700A?checkoutMode=10"
+        linkCompra: "https://pay.hotmart.com/N100044015B",
+        linkEbook: "https://pay.hotmart.com/N100044015B",
+        linkFisico: "https://pay.hotmart.com/U101026859G"
     },
     ilu: {
         titulo: "Ilú Odára",
         preco: "R$ 24,99",
+        precoEbook: "R$ 24,99",
+        precoFisico: "R$ 54,99",
         imagem: "ilu odara folha.png",
         badges: [],
         descricao: "Um mergulho profundo no universo sagrado dos tambores afro-brasileiros. Ao longo de 15 capítulos, esta obra revela o tambor como ser vivo, guardião de segredos, transmissor de axé e elo entre o mundo visível (Ayé) e o invisível (Òrún). Uma jornada pela musicalidade e espiritualidade das tradições yorùbá.",
@@ -77,17 +91,21 @@ const produtos = {
             "História de resistência e tradição"
         ],
         dados: {
-            "Autor": "Yorùbá History Channel",
+            "Autor": "Bàbá Akindele",
             "Editora": "Yorùbá History Channel",
             "Ano": "2025",
             "Formato": "Digital (PDF) / Físico",
             "Páginas": "110"
         },
-        linkCompra: "https://pay.hotmart.com/R92825700A?checkoutMode=10"
+        linkCompra: "https://pay.hotmart.com/T101224252U",
+        linkEbook: "https://pay.hotmart.com/T101224252U",
+        linkFisico: "https://pay.hotmart.com/X101224611R"
     },
     odu: {
         titulo: "Odù no Èrìndílógún",
         preco: "R$ 34,99",
+        precoEbook: "R$ 34,99",
+        precoFisico: "R$ 64,99",
         imagem: "livro_odus.jpg",
         badges: [],
         descricao: "Uma obra fundamental sobre o sistema oracular dos búzios, explorando os 16 Odù principais do Èrìndílógún. Este livro desvenda os mistérios, caminhos e conselhos contidos em cada configuração dos búzios, oferecendo conhecimento profundo sobre interpretação, rituais e fundamentos desta arte divinatória ancestral.",
@@ -99,19 +117,21 @@ const produtos = {
             "Arte divinatória ancestral"
         ],
         dados: {
-            "Autor": "Yorùbá History Channel",
+            "Autor": "Bàbá Akindele",
             "Editora": "Yorùbá History Channel",
             "Ano": "2025",
             "Formato": "Digital (PDF) / Físico",
             "Páginas": "88"
         },
-        linkCompra: "https://pay.hotmart.com/R92825700A?checkoutMode=10"
+        linkCompra: "https://pay.hotmart.com/H101249647U",
+        linkEbook: "https://pay.hotmart.com/H101249647U",
+        linkFisico: "https://pay.hotmart.com/O101250008A"
     },
     "combo-sagrado": {
         titulo: "Combo Sagrado",
         preco: "R$ 89,99",
         imagem: "combo_oraculo.png",
-        badges: ['Mais Popular'],
+        badges: [],
         descricao: "Uma seleção especial dos nossos livros mais procurados para quem deseja mergulhar no universo sagrado do Candomblé. Este combo inclui conhecimentos essenciais sobre língua, oráculo e folhas sagradas.",
         destaques: [
             "Yorùbá Descomplicado",
@@ -127,13 +147,15 @@ const produtos = {
             "Formato": "Digital (PDF)",
             "Acesso": "Imediato"
         },
-        linkCompra: "https://pay.hotmart.com/X92825736K?checkoutMode=10"
+        linkCompra: "https://pay.hotmart.com/X92825736K?checkoutMode=10",
+        linkEbook: "https://pay.hotmart.com/X92825736K?checkoutMode=10",
+        linkFisico: "https://pay.hotmart.com/X92825736K?checkoutMode=10"
     },
     "combo-completo": {
         titulo: "Combo Completo",
         preco: "R$ 139,99",
         imagem: "combo_geral.png",
-        badges: ['Premium'],
+        badges: [],
         descricao: "A coleção completa de todos os nossos livros sobre tradições yorùbá e afro-brasileiras. Ideal para estudiosos, praticantes e todos que desejam conhecimento profundo sobre a cultura ancestral.",
         destaques: [
             "Todos os 5 livros da coleção",
@@ -151,13 +173,15 @@ const produtos = {
             "Formato": "Digital (PDF)",
             "Acesso": "Imediato"
         },
-        linkCompra: "https://pay.hotmart.com/J92825659D?checkoutMode=10"
+        linkCompra: "https://pay.hotmart.com/J92825659D?checkoutMode=10",
+        linkEbook: "https://pay.hotmart.com/J92825659D?checkoutMode=10",
+        linkFisico: "https://pay.hotmart.com/J92825659D?checkoutMode=10"
     },
     "combo-oraculo": {
         titulo: "Combo Oráculo",
         preco: "R$ 59,99",
         imagem: "combo.png",
-        badges: ['Econômico'],
+        badges: [],
         descricao: "Focado nos sistemas oraculares tradicionais, este combo é perfeito para quem quer aprender sobre Obì e Èrìndílógún. Conhecimento profundo sobre as artes divinatórias yorùbá.",
         destaques: [
             "Aprendendo a Jogar Obì",
@@ -173,7 +197,9 @@ const produtos = {
             "Formato": "Digital (PDF)",
             "Acesso": "Imediato"
         },
-        linkCompra: "https://pay.hotmart.com/V92825780G?checkoutMode=10"
+        linkCompra: "https://pay.hotmart.com/V92825780G?checkoutMode=10",
+        linkEbook: "https://pay.hotmart.com/V92825780G?checkoutMode=10",
+        linkFisico: "https://pay.hotmart.com/V92825780G?checkoutMode=10"
     }
 };
 
@@ -184,12 +210,12 @@ const modalClose = document.getElementById('modal-close');
 const modalImg = document.getElementById('modal-img');
 const modalTitulo = document.getElementById('modal-titulo');
 const modalTituloHeader = document.getElementById('modal-titulo-header');
-const modalPreco = document.getElementById('modal-preco');
 const modalBadges = document.getElementById('modal-badges');
 const modalDescricao = document.getElementById('modal-descricao-texto');
 const modalDestaques = document.getElementById('modal-destaques');
 const modalDados = document.getElementById('modal-dados');
-const modalBtnComprar = document.getElementById('modal-btn-comprar');
+const modalBtnEbook = document.getElementById('modal-btn-ebook');
+const modalBtnFisico = document.getElementById('modal-btn-fisico');
 
 // Função para abrir o modal
 function abrirModal(produtoId) {
@@ -201,9 +227,23 @@ function abrirModal(produtoId) {
     modalImg.alt = produto.titulo;
     modalTitulo.textContent = produto.titulo;
     modalTituloHeader.textContent = produto.titulo;
-    modalPreco.textContent = produto.preco;
     modalDescricao.textContent = produto.descricao;
-    modalBtnComprar.href = produto.linkCompra;
+    
+    // Configurar botões de compra
+    modalBtnEbook.href = produto.linkEbook || produto.linkCompra;
+    modalBtnFisico.href = produto.linkFisico || produto.linkCompra;
+
+    // Preencher preços nos botões
+    const precoEbookEl = document.getElementById('preco-ebook');
+    const precoFisicoEl = document.getElementById('preco-fisico');
+    
+    if (precoEbookEl) {
+        precoEbookEl.textContent = produto.precoEbook || produto.preco;
+    }
+    
+    if (precoFisicoEl) {
+        precoFisicoEl.textContent = produto.precoFisico || produto.preco;
+    }
 
     // Badges
     modalBadges.innerHTML = '';
