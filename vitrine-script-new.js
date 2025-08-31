@@ -1,4 +1,5 @@
 // Dados dos produtos
+// Última atualização: 31/08/2025 - Modal do livro dos Èbós adicionado
 const produtos = {
     yoruba: {
         titulo: "Yorùbá Descomplicado - Uso em Rituais Sagrados do Candomblé",
@@ -120,7 +121,7 @@ const produtos = {
         linkEbook: "https://pay.hotmart.com/H101249647U",
         linkFisico: "https://pay.hotmart.com/O101250008A"
     },
-    ebos: {
+    "livro-ebos": {
         titulo: "O livro dos Èbós - Fundamentos e Práticas Sagradas",
         preco: "R$ 89,99",
         precoEbook: "R$ 89,99",
@@ -230,9 +231,11 @@ const produtos = {
 // Função para abrir o modal
 function abrirModal(produtoId) {
     console.log('Abrindo modal para:', produtoId);
+    console.log('Produtos disponíveis:', Object.keys(produtos));
     const produto = produtos[produtoId];
     if (!produto) {
         console.error('Produto não encontrado:', produtoId);
+        console.error('Produtos disponíveis:', Object.keys(produtos));
         return;
     }
 
@@ -362,11 +365,23 @@ function iniciarHeroDinamico() {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM carregado, inicializando...');
     
+    // Verificação de integridade
+    const modal = document.getElementById('produto-modal');
+    
+    if (!modal) {
+        console.error('Modal não encontrado!');
+        return;
+    }
+    
     // Inicializar hero dinâmico
     iniciarHeroDinamico();
     
     // Botões "Ver Detalhes"
     const botoesDetalhes = document.querySelectorAll('.btn-ver-detalhes');
+    console.log('Elementos verificados:');
+    console.log('- Modal:', modal ? 'OK' : 'ERRO');
+    console.log('- Botões encontrados:', botoesDetalhes.length);
+    console.log('- Produtos definidos:', Object.keys(produtos).length);
     console.log('Botões encontrados:', botoesDetalhes.length);
     
     botoesDetalhes.forEach(botao => {
@@ -392,6 +407,49 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Clique no card, produto:', produtoId);
                 abrirModal(produtoId);
             }
+        });
+    });
+
+    // Títulos dos produtos como botões (especialmente para mobile)
+    const produtoTitulos = document.querySelectorAll('.produto-titulo');
+    console.log('Títulos encontrados:', produtoTitulos.length);
+    
+    // Função para verificar se é mobile
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+    
+    // Função para atualizar títulos baseado no tamanho da tela
+    function atualizarTitulos() {
+        produtoTitulos.forEach(titulo => {
+            if (!titulo.dataset.tituloOriginal) {
+                titulo.dataset.tituloOriginal = titulo.textContent;
+            }
+            
+            if (isMobile()) {
+                titulo.textContent = "COMPRAR";
+                titulo.style.cursor = "pointer";
+            } else {
+                titulo.textContent = titulo.dataset.tituloOriginal;
+                titulo.style.cursor = "default";
+            }
+        });
+    }
+    
+    // Executar na inicialização
+    atualizarTitulos();
+    
+    // Executar quando a tela for redimensionada
+    window.addEventListener('resize', atualizarTitulos);
+    
+    produtoTitulos.forEach(titulo => {
+        titulo.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const produtoCard = this.closest('.produto-card');
+            const produtoId = produtoCard.getAttribute('data-produto');
+            console.log('Clique no título, produto:', produtoId);
+            abrirModal(produtoId);
         });
     });
 
