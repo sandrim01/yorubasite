@@ -274,24 +274,44 @@ function abrirModal(produtoId) {
     if (modalDescricao) modalDescricao.textContent = produto.descricao;
     
     // Configurar botões de compra com onclick
+    console.log('Configurando botões - LinkEbook:', produto.linkEbook, 'LinkFisico:', produto.linkFisico);
     if (modalBtnEbook) {
         modalBtnEbook.href = "#";
         modalBtnEbook.onclick = function(e) {
             e.preventDefault();
+            console.log('Clique no botão ebook, abrindo:', produto.linkEbook || produto.linkCompra);
             window.open(produto.linkEbook || produto.linkCompra, '_blank');
         };
+        console.log('Botão ebook configurado');
+    } else {
+        console.error('Elemento modal-btn-ebook não encontrado');
     }
     if (modalBtnFisico) {
         modalBtnFisico.href = "#";
         modalBtnFisico.onclick = function(e) {
             e.preventDefault();
+            console.log('Clique no botão físico, abrindo:', produto.linkFisico || produto.linkCompra);
             window.open(produto.linkFisico || produto.linkCompra, '_blank');
         };
+        console.log('Botão físico configurado');
+    } else {
+        console.error('Elemento modal-btn-fisico não encontrado');
     }
 
     // Preencher preços nos botões
-    if (precoEbookEl) precoEbookEl.textContent = produto.precoEbook || produto.preco;
-    if (precoFisicoEl) precoFisicoEl.textContent = produto.precoFisico || produto.preco;
+    console.log('Atualizando preços - Ebook:', produto.precoEbook || produto.preco, 'Fisico:', produto.precoFisico || produto.preco);
+    if (precoEbookEl) {
+        precoEbookEl.textContent = produto.precoEbook || produto.preco;
+        console.log('Preço ebook atualizado para:', precoEbookEl.textContent);
+    } else {
+        console.error('Elemento preco-ebook não encontrado');
+    }
+    if (precoFisicoEl) {
+        precoFisicoEl.textContent = produto.precoFisico || produto.preco;
+        console.log('Preço físico atualizado para:', precoFisicoEl.textContent);
+    } else {
+        console.error('Elemento preco-fisico não encontrado');
+    }
 
     // Destaques
     if (modalDestaques) {

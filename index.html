@@ -2,6 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="format-detection" content="telephone=no">
     <meta name="mobile-web-app-capable" content="yes">
@@ -23,9 +26,9 @@
     <meta property="twitter:description" content="Descubra nossa coleção completa com livros de conhecimento ancestral Yorùbá, combos especiais e materiais espirituais do Bàbá Akindele. Coleção exclusiva de sabedoria milenar.">
     <meta property="twitter:image" content="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vitrine-styles-new.css">
-    <link rel="stylesheet" href="tribal-patterns.css">
-    <link rel="stylesheet" href="candomble-patterns.css">
+    <link rel="stylesheet" href="vitrine-styles-new.css?v=20250831-2">
+    <link rel="stylesheet" href="tribal-patterns.css?v=20250831-2">
+    <link rel="stylesheet" href="candomble-patterns.css?v=20250831-2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ7Y6M8366"></script>
@@ -388,6 +391,37 @@
     <button id="back-to-top" class="back-to-top" title="Voltar ao topo">
         <i class="fas fa-chevron-up"></i>
     </button>
-    <script src="vitrine-script-new.js"></script>
+    <script src="vitrine-script-new.js?v=20250831-2"></script>
+    <script>
+        // Script de verificação e correção de cache - v20250831
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Verificando integridade do sistema...');
+            
+            // Verificar se todos os elementos do modal existem
+            const elementosModal = [
+                'produto-modal',
+                'modal-btn-ebook', 
+                'modal-btn-fisico',
+                'preco-ebook',
+                'preco-fisico',
+                'modal-img',
+                'modal-titulo',
+                'modal-subtitulo'
+            ];
+            
+            elementosModal.forEach(id => {
+                const elemento = document.getElementById(id);
+                console.log(`Elemento ${id}:`, elemento ? 'OK' : 'ERRO');
+            });
+            
+            // Verificar se os produtos estão carregados
+            if (typeof produtos !== 'undefined') {
+                console.log('Produtos carregados:', Object.keys(produtos));
+                console.log('Livro dos Èbós disponível:', produtos['livro-ebos'] ? 'SIM' : 'NÃO');
+            } else {
+                console.error('Objeto produtos não encontrado!');
+            }
+        });
+    </script>
 </body>
 </html>
