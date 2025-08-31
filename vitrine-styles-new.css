@@ -605,29 +605,31 @@ body::before {
 }
 
 .preco-botao {
-    background: #fcf5b8;
+    background: #ffffff;
     color: #000000;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 900;
-    padding: 0.5rem 1rem;
-    border-radius: 8px 8px 0 0;
-    border: 2px solid #d4af37;
+    padding: 0.8rem 1rem;
+    border-radius: 12px 12px 0 0;
+    border: 3px solid #d4af37;
     border-bottom: none;
     text-align: center;
     width: 100%;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .btn-comprar {
-    background: #dfc2c2;
-    color: #000000;
-    border: 2px solid #d4af37;
-    padding: 0.8rem 2rem;
-    border-radius: 0 0 8px 8px;
-    font-weight: 800;
-    font-size: 0.7rem;
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    color: #1a1a1a;
+    border: 3px solid #b8860b;
+    padding: 1.2rem 2rem;
+    border-radius: 0 0 12px 12px;
+    font-weight: 900;
+    font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -635,41 +637,101 @@ body::before {
     width: 100%;
     justify-content: center;
     margin-top: 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5), 
+                0 4px 12px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-comprar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-comprar:hover::before {
+    left: 100%;
 }
 
 .btn-comprar:hover {
-    background: #f8f9fa;
-    color: #000000;
-    border: 2px solid #d4af37;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #1a1a1a;
+    border: 3px solid #d4af37;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.7), 
+                0 6px 16px rgba(0, 0, 0, 0.4),
+                inset 0 2px 0 rgba(255, 255, 255, 0.5);
 }
 
 .btn-ebook {
-    background: #ffffff;
-    border-color: #d4af37;
-    color: #000000;
+    background: linear-gradient(135deg, #b8860b, #d4af37);
+    border-color: #8b6914;
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4),
+                0 2px 8px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .btn-ebook:hover {
-    background: #f8f9fa;
-    border-color: #d4af37;
-    color: #000000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #d4af37, #f4c842);
+    border-color: #b8860b;
+    color: #1a1a1a;
+    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.6),
+                0 4px 12px rgba(0, 0, 0, 0.3),
+                inset 0 2px 0 rgba(255, 255, 255, 0.4);
 }
 
 .btn-fisico {
-    background: #ffffff;
-    border-color: #d4af37;
-    color: #000000;
+    background: linear-gradient(135deg, #8b6914, #b8860b);
+    border-color: #6b5011;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(107, 80, 17, 0.4),
+                0 2px 8px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn-fisico:hover {
-    background: #f8f9fa;
-    border-color: #d4af37;
-    color: #000000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #b8860b, #d4af37);
+    border-color: #8b6914;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(107, 80, 17, 0.6),
+                0 4px 12px rgba(0, 0, 0, 0.3),
+                inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Animação pulsante para chamar atenção */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    }
+}
+
+.opcao-compra {
+    animation: pulse 2s infinite;
+}
+
+.opcao-compra:hover {
+    animation: none;
+}
+
+/* Efeito de destaque nos ícones */
+.btn-comprar i {
+    font-size: 1.2rem;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 /* === SEÇÕES INFORMATIVAS === */
@@ -972,7 +1034,26 @@ body::before {
     
     .botoes-compra {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
+    }
+    
+    .opcao-compra {
+        min-width: 100%;
+    }
+    
+    .preco-botao {
+        font-size: 1.8rem;
+        padding: 1rem 1.5rem;
+    }
+    
+    .btn-comprar {
+        font-size: 1.1rem;
+        padding: 1.5rem 2rem;
+        letter-spacing: 1.2px;
+    }
+    
+    .btn-comprar i {
+        font-size: 1.4rem;
     }
     
     .conteudo-grid {

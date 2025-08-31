@@ -120,6 +120,31 @@ const produtos = {
         linkEbook: "https://pay.hotmart.com/H101249647U",
         linkFisico: "https://pay.hotmart.com/O101250008A"
     },
+    ebos: {
+        titulo: "O livro dos Èbós - Fundamentos e Práticas Sagradas",
+        preco: "R$ 89,99",
+        precoEbook: "R$ 89,99",
+        precoFisico: "R$ 139,90",
+        imagem: "livro_ebos.jpg",
+        badges: [],
+        descricao: "Este livro apresenta um mergulho profundo na tradição dos ebós, rituais sagrados de limpeza, proteção e transformação dentro do culto aos Òrìṣà. Bàbá Akindele reúne fundamentos, ingredientes, receitas e aplicações práticas, mostrando como cada ebó atua na abertura de caminhos, na cura espiritual e no fortalecimento do axé. Uma obra indispensável para iniciados, estudiosos e todos que buscam compreender a importância e o poder dos ebós na tradição yorùbá e no Candomblé.",
+        destaques: [
+            "Fundamentos e simbolismo dos ebós",
+            "Ingredientes, receitas e modos de preparo",
+            "Conexão com Òrìṣà e com o oráculo",
+            "Aplicações para proteção, prosperidade e equilíbrio"
+        ],
+        dados: {
+            "Autor": "Bàbá Akindele",
+            "Editora": "Yorùbá History Channel",
+            "Ano": "2025",
+            "Formato": "Digital (PDF) / Físico",
+            "Páginas": "203"
+        },
+        linkCompra: "https://pay.hotmart.com/F101665291H",
+        linkEbook: "https://pay.hotmart.com/F101665291H",
+        linkFisico: "https://pay.hotmart.com/W101665411S"
+    },
     "combo-sagrado": {
         titulo: "Combo Sagrado",
         preco: "R$ 89,99",
