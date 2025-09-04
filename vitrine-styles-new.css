@@ -287,6 +287,38 @@ body::before {
     border: 2px solid #d4af37;
 }
 
+.combo-card .preco-original {
+    display: block !important;
+    visibility: visible !important;
+    color: #dc2626 !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    text-decoration: line-through !important;
+    opacity: 1 !important;
+}
+
+.combo-card .preco-original::before {
+    content: "de: ";
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.combo-card .preco-valor {
+    display: block !important;
+    color: #d4af37 !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+}
+
+.combo-card .preco-valor::before {
+    content: "por: ";
+    color: #64748b;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
 .combo-card:hover {
     border-color: #f4c842;
     box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
@@ -373,28 +405,62 @@ body::before {
     justify-content: space-between;
     gap: 1rem;
     margin-top: 0.5rem;
+    padding: 0.8rem;
+    background: rgba(212, 175, 55, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .preco-opcao {
     flex: 1;
     text-align: center;
+    min-width: 0; /* Permite flexbox funcionar corretamente */
 }
 
 .preco-label {
     display: block;
-    font-size: 0.75rem;
-    font-weight: 500;
+    font-size: 0.7rem;
+    font-weight: 600;
     color: #64748b;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
+}
+
+.preco-original {
+    display: block !important;
+    font-size: 0.8rem !important;
+    color: #dc2626 !important;
+    text-decoration: line-through !important;
+    margin-bottom: 0.3rem !important;
+    font-weight: 600 !important;
+    opacity: 0.9 !important;
+    visibility: visible !important;
+    line-height: 1.2 !important;
+}
+
+.preco-original::before {
+    content: "de: ";
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
 }
 
 .preco-valor {
     display: block;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #b91c1c;
+    color: #d4af37 !important;
+    text-shadow: 0 1px 2px rgba(212, 175, 55, 0.1);
+    line-height: 1.2;
+}
+
+.preco-valor::before {
+    content: "por: ";
+    color: #64748b;
+    font-size: 0.7rem;
+    font-weight: 500;
 }
 
 .produto-badges {
@@ -688,6 +754,56 @@ body::before {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.preco-modal-container {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    padding: 0.7rem;
+    border-radius: 8px 8px 0 0;
+    border: 2px solid #d4af37;
+    border-bottom: none;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.preco-modal-original {
+    display: block;
+    font-size: 0.85rem;
+    color: #dc2626 !important;
+    text-decoration: line-through;
+    font-weight: 500;
+    opacity: 0.8;
+    order: 1;
+}
+
+.preco-modal-original::before {
+    content: "de: ";
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.preco-modal-valor {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #d4af37 !important;
+    text-shadow: 0 1px 2px rgba(212, 175, 55, 0.1);
+    line-height: 1.2;
+    order: 2;
+}
+
+.preco-modal-valor::before {
+    content: "por: ";
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
 .btn-comprar {
     background: linear-gradient(135deg, #d4af37, #ffd700);
     color: #1a1a1a;
@@ -844,6 +960,39 @@ body::before {
     .preco-botao {
         font-size: 1.2rem;
         padding: 0.8rem;
+    }
+
+    /* Correções específicas para preços em mobile */
+    .produto-precos {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .preco-opcao {
+        padding: 0.4rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 6px;
+    }
+
+    .preco-original {
+        font-size: 0.8rem;
+    }
+
+    .preco-valor {
+        font-size: 1.2rem;
+    }
+
+    .preco-modal-container {
+        padding: 0.6rem;
+    }
+
+    .preco-modal-original {
+        font-size: 0.9rem;
+    }
+
+    .preco-modal-valor {
+        font-size: 1.3rem;
     }
 
     .btn-comprar {
@@ -1472,7 +1621,7 @@ input:focus {
     }
 }
 
-/* === FORCE CACHE REFRESH - v20250831 === */
+/* === FORCE CACHE REFRESH - v20250903-precos === */
 .btn-ebook, .btn-fisico {
     transition: all 0.3s ease !important;
     cursor: pointer !important;
@@ -1490,7 +1639,13 @@ input:focus {
     color: #ffffff !important;
 }
 
-#preco-ebook, #preco-fisico {
-    font-weight: bold !important;
-    color: inherit !important;
+/* Força aplicação dos pseudo-elementos de preços */
+.preco-original::before,
+.preco-valor::before,
+.combo-card .preco-original::before,
+.combo-card .preco-valor::before,
+.preco-modal-original::before,
+.preco-modal-valor::before {
+    display: inline !important;
+    content: attr(data-prefix) !important;
 }

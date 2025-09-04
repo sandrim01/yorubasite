@@ -1,11 +1,21 @@
 // Dados dos produtos
 // Última atualização: 31/08/2025 - Modal do livro dos Èbós adicionado
+
+// Função para calcular preço original baseado no promocional
+function calcularPrecoOriginal(precoPromocional) {
+    const valor = parseFloat(precoPromocional.replace('R$ ', '').replace(',', '.'));
+    const original = valor + 10; // Adiciona R$ 10
+    return `R$ ${original.toFixed(2).replace('.', ',')}`;
+}
+
 const produtos = {
     yoruba: {
         titulo: "Yorùbá Descomplicado - Uso em Rituais Sagrados do Candomblé",
         preco: "R$ 39,99",
         precoEbook: "R$ 39,99",
+        precoEbookOriginal: "R$ 49,99",
         precoFisico: "R$ 89,99",
+        precoFisicoOriginal: "R$ 99,99",
         imagem: "livro_yoruba.png",
         badges: [],
         descricao: "Mais do que um dicionário, este é um guia funcional e ritualístico da língua yorùbá. O livro ensina vocabulário, estrutura de frases, pronúncia, termos rituais e saudações utilizadas nos terreiros. Material indispensável para iniciados, praticantes e estudiosos da cultura afro-brasileira que desejam se comunicar com respeito, reverência e precisão nos contextos sagrados.",
@@ -29,7 +39,9 @@ const produtos = {
         titulo: "Aprendendo a Jogar Obì - O Oráculo Sagrado dos Òrìsà",
         preco: "R$ 29,99",
         precoEbook: "R$ 29,99",
+        precoEbookOriginal: "R$ 39,99",
         precoFisico: "R$ 69,99",
+        precoFisicoOriginal: "R$ 79,99",
         imagem: "livro_obi.png",
         badges: [],
         descricao: "Neste guia essencial, Bàbá Akindele ensina de forma prática como jogar, interpretar e cuidar do Obì – um dos oráculos mais antigos e respeitados no culto aos Òrìsà. O livro apresenta as formas de jogo, tipos de Obì, invocações, oríkì, interpretações e cuidados rituais.",
@@ -53,7 +65,9 @@ const produtos = {
         titulo: "Èwé Òró - Folhas de Fundamento I",
         preco: "R$ 29,99",
         precoEbook: "R$ 29,99",
+        precoEbookOriginal: "R$ 39,99",
         precoFisico: "R$ 69,99",
+        precoFisicoOriginal: "R$ 79,99",
         imagem: "livro_eweoro.png",
         badges: [],
         descricao: "Este livro é um verdadeiro herbário espiritual que apresenta o nome sagrado de dezenas de folhas utilizadas nos rituais afro-brasileiros. Cada entrada traz o nome em yorùbá com acentuação tonal correta, nome popular, nome científico, Òrìṣà correspondente, usos medicinais, aplicações ritualísticas e imagens ilustrativas. Obra essencial para iniciados, sacerdotes e estudiosos que desejam aprofundar sua relação com o universo vegetal sagrado.",
@@ -77,7 +91,9 @@ const produtos = {
         titulo: "Ilú Odára - Ritmo, Tradição e Fé",
         preco: "R$ 24,99",
         precoEbook: "R$ 24,99",
+        precoEbookOriginal: "R$ 34,99",
         precoFisico: "R$ 64,99",
+        precoFisicoOriginal: "R$ 74,99",
         imagem: "ilu odara folha.png",
         badges: [],
         descricao: "Um mergulho no universo dos tambores sagrados do Candomblé e da Umbanda. O livro revela a história, os tipos de atabaques, a missão dos ogãs e a linguagem ritual dos toques que invocam os Òrìṣà.",
@@ -101,7 +117,9 @@ const produtos = {
         titulo: "Odù no Ẹ́ẹ́rìndínlógún - Caminhos, Conselhos e Mistérios",
         preco: "R$ 34,99",
         precoEbook: "R$ 34,99",
+        precoEbookOriginal: "R$ 44,99",
         precoFisico: "R$ 84,99",
+        precoFisicoOriginal: "R$ 94,99",
         imagem: "livro_odus.jpg",
         badges: [],
         descricao: "Este livro apresenta um estudo completo sobre os 16 Òdù maiores do oráculo dos búzios, conhecido como Ẹ́ẹ́rìndínlógún. Bàbá Akindele revela os fundamentos, funções e simbolismos de cada Odù, conectando histórias ancestrais com o uso ritual e prático. Obra indispensável para quem deseja compreender profundamente o jogo de búzios.",
@@ -123,9 +141,11 @@ const produtos = {
     },
     "livro-ebos": {
         titulo: "O livro dos Èbós - Fundamentos e Práticas Sagradas",
-        preco: "R$ 89,99",
-        precoEbook: "R$ 89,99",
-        precoFisico: "R$ 139,90",
+        preco: "R$ 69,99",
+        precoEbook: "R$ 69,99",
+        precoEbookOriginal: "R$ 79,99",
+        precoFisico: "R$ 119,99",
+        precoFisicoOriginal: "R$ 129,99",
         imagem: "livro_ebos.jpg",
         badges: [],
         descricao: "Este livro apresenta um mergulho profundo na tradição dos ebós, rituais sagrados de limpeza, proteção e transformação dentro do culto aos Òrìṣà. Bàbá Akindele reúne fundamentos, ingredientes, receitas e aplicações práticas, mostrando como cada ebó atua na abertura de caminhos, na cura espiritual e no fortalecimento do axé. Uma obra indispensável para iniciados, estudiosos e todos que buscam compreender a importância e o poder dos ebós na tradição yorùbá e no Candomblé.",
@@ -150,7 +170,9 @@ const produtos = {
         titulo: "Combo Sagrado",
         preco: "R$ 89,99",
         precoEbook: "R$ 89,99",
-        precoFisico: "R$ 179,99",
+        precoEbookOriginal: "R$ 99,97",
+        precoFisico: "R$ 199,99",
+        precoFisicoOriginal: "R$ 229,97",
         imagem: "combo.png",
         badges: [],
         descricao: "Uma seleção especial dos nossos livros mais procurados para quem deseja mergulhar no universo sagrado do Candomblé. Este combo inclui conhecimentos essenciais sobre língua, oráculo e folhas sagradas.",
@@ -174,9 +196,11 @@ const produtos = {
     },
     "combo-completo": {
         titulo: "Combo Completo",
-        preco: "R$ 139,99",
-        precoEbook: "R$ 139,99",
-        precoFisico: "R$ 289,99",
+        preco: "R$ 149,99",
+        precoEbook: "R$ 149,99",
+        precoEbookOriginal: "R$ 209,95",
+        precoFisico: "R$ 349,99",
+        precoFisicoOriginal: "R$ 429,95",
         imagem: "combo_geral.png",
         badges: [],
         descricao: "A coleção completa de todos os nossos livros sobre tradições yorùbá e afro-brasileiras. Ideal para estudiosos, praticantes e todos que desejam conhecimento profundo sobre a cultura ancestral.",
@@ -204,7 +228,9 @@ const produtos = {
         titulo: "Combo Oráculo",
         preco: "R$ 59,99",
         precoEbook: "R$ 59,99",
+        precoEbookOriginal: "R$ 64,98",
         precoFisico: "R$ 119,99",
+        precoFisicoOriginal: "R$ 154,98",
         imagem: "combo_oraculo.png",
         badges: [],
         descricao: "Focado nos sistemas oraculares tradicionais, este combo é perfeito para quem quer aprender sobre Obì e Èrìndílógún. Conhecimento profundo sobre as artes divinatórias yorùbá.",
@@ -250,6 +276,8 @@ function abrirModal(produtoId) {
     const modalBtnFisico = document.getElementById('modal-btn-fisico');
     const precoEbookEl = document.getElementById('preco-ebook');
     const precoFisicoEl = document.getElementById('preco-fisico');
+    const precoEbookOriginalEl = document.getElementById('preco-ebook-original');
+    const precoFisicoOriginalEl = document.getElementById('preco-fisico-original');
 
     // Verificar se todos os elementos existem
     if (!modal || !modalImg || !modalTitulo) {
@@ -311,6 +339,16 @@ function abrirModal(produtoId) {
         console.log('Preço físico atualizado para:', precoFisicoEl.textContent);
     } else {
         console.error('Elemento preco-fisico não encontrado');
+    }
+
+    // Preencher preços originais
+    if (precoEbookOriginalEl) {
+        precoEbookOriginalEl.textContent = produto.precoEbookOriginal || calcularPrecoOriginal(produto.precoEbook || produto.preco);
+        console.log('Preço ebook original atualizado para:', precoEbookOriginalEl.textContent);
+    }
+    if (precoFisicoOriginalEl) {
+        precoFisicoOriginalEl.textContent = produto.precoFisicoOriginal || calcularPrecoOriginal(produto.precoFisico || produto.preco);
+        console.log('Preço físico original atualizado para:', precoFisicoOriginalEl.textContent);
     }
 
     // Destaques
