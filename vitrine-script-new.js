@@ -166,6 +166,33 @@ const produtos = {
         linkEbook: "https://pay.hotmart.com/F101665291H",
         linkFisico: "https://pay.hotmart.com/W101665411S"
     },
+    ounje: {
+        titulo: "Òunjẹ́ Àṣẹ - Comidas Sagradas dos Òrìṣà",
+        preco: "R$ 49,99",
+        precoEbook: "R$ 49,99",
+        precoEbookOriginal: "R$ 59,99",
+        precoFisico: "R$ 99,99",
+        precoFisicoOriginal: "R$ 109,99",
+        imagem: "ounje.jpg",
+        badges: [],
+        descricao: "Neste livro fundamental, Bàbá Akindele apresenta a riqueza da culinária sagrada do Candomblé e da tradição yorùbá, revelando como cada prato é mais do que alimento: é oferenda, oração e caminho de ligação com o divino. A obra descreve receitas tradicionais, seus significados espirituais e rituais, além do papel essencial da Yabassê como guardiã dos segredos da cozinha sagrada.",
+        destaques: [
+            "Receitas completas de comidas rituais para os principais Òrìṣà",
+            "Explicações sobre o simbolismo de cada prato e seus ingredientes",
+            "Orientações sobre o preparo com respeito, fé e Axé",
+            "Preservação da tradição oral e da prática ancestral"
+        ],
+        dados: {
+            "Autor": "Bàbá Akindele",
+            "Editora": "Yorùbá History Channel",
+            "Ano": "2025",
+            "Formato": "Digital (PDF) e Impresso",
+            "Páginas": "184"
+        },
+        linkCompra: "https://pay.hotmart.com/E101920830J",
+        linkEbook: "https://pay.hotmart.com/E101920830J",
+        linkFisico: "https://pay.hotmart.com/X101921002I"
+    },
     "combo-sagrado": {
         titulo: "Combo Sagrado",
         preco: "R$ 89,99",
