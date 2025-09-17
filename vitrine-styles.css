@@ -2181,3 +2181,59 @@ p, span, div, li {
         text-align: center;
     }
 }
+
+/* ========================================
+   ESTILOS ESPECÍFICOS PARA CARD PERSONALIZADO
+   ======================================== */
+
+/* Garante que o card personalizado tenha a mesma estrutura de imagem */
+.combo-personalizado {
+    border-color: #10b981;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+}
+
+.combo-personalizado:hover {
+    background: linear-gradient(145deg, #10b981, #34d399);
+    border-color: #10b981;
+    color: #1a1a1a;
+}
+
+/* Garante posicionamento correto da imagem no card personalizado */
+.combo-personalizado .produto-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: #f8fafc;
+}
+
+.combo-personalizado .produto-image img {
+    width: auto;
+    height: auto;
+    max-width: 85%;
+    max-height: 280px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.combo-personalizado:hover .produto-image img {
+    transform: scale(1.05);
+}
+
+/* Badge personalizado */
+.combo-personalizado .produto-badge.personalizado {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    z-index: 2;
+}

@@ -152,7 +152,7 @@ const produtos = {
         linkFisico: "https://pay.hotmart.com/X92825736K?checkoutMode=10"
     },
     "combo-completo": {
-        titulo: "Combo Completo",
+        titulo: "Combo 5 Livros",
         preco: "R$ 139,99",
         imagem: "combo_geral.png",
         badges: [],
@@ -177,6 +177,34 @@ const produtos = {
         linkEbook: "https://pay.hotmart.com/J92825659D?checkoutMode=10",
         linkFisico: "https://pay.hotmart.com/J92825659D?checkoutMode=10"
     },
+    "combo-completo-7": {
+        titulo: "Combo Completo – 7 Livros de Sabedoria Yorùbá",
+        preco: "R$ 269,99",
+        precoEbook: "R$ 269,99",
+        precoFisico: "R$ 549,99",
+        imagem: "combo_7.png",
+        badges: [],
+        descricao: "Descubra a riqueza completa da tradição yorùbá com esta coleção definitiva de 7 livros, reunindo os ensinamentos mais essenciais da Yorùbá History Channel. Explore oráculos sagrados, a língua ritual, folhas sagradas, ritmos dos tambores e aprenda os fundamentos dos èbós e das comidas sagradas dos Òrìṣà. Esta caixa digital e física é um guia indispensável para iniciados, sacerdotes, estudiosos e todos que desejam mergulhar profundamente na cultura afro-brasileira e no culto aos Òrìṣà.",
+        destaques: [
+            "Odù no Ẹ́ẹ́rìndínlógún – Caminhos, Conselhos e Mistérios",
+            "Aprendendo a Jogar Obì – O Oráculo Sagrado dos Òrìṣà",
+            "Yorùbá Descomplicado – Uso em Rituais Sagrados do Candomblé",
+            "Èwé Òró – Folhas de Fundamento I",
+            "Ilú Odára – Ritmo, Tradição e Fé",
+            "O Livro dos Èbós – Fundamentos Práticos",
+            "Òunjẹ́ Àṣẹ – Comidas Sagradas dos Òrìṣà"
+        ],
+        dados: {
+            "Livros Inclusos": "7 livros completos",
+            "Formato Digital": "PDF com qualidade premium",
+            "Formato Físico": "Caixa especial colecionável",
+            "Acesso": "Imediato (digital)",
+            "Público": "Iniciados, sacerdotes e estudiosos"
+        },
+        linkCompra: "https://pay.hotmart.com/O101946657W",
+        linkEbook: "https://pay.hotmart.com/O101946657W",
+        linkFisico: "https://pay.hotmart.com/F101946521G"
+    },
     "combo-oraculo": {
         titulo: "Combo Oráculo",
         preco: "R$ 59,99",
@@ -200,6 +228,60 @@ const produtos = {
         linkCompra: "https://pay.hotmart.com/V92825780G?checkoutMode=10",
         linkEbook: "https://pay.hotmart.com/V92825780G?checkoutMode=10",
         linkFisico: "https://pay.hotmart.com/V92825780G?checkoutMode=10"
+    },
+    "combo-oferendas": {
+        titulo: "Combo Oferendas – Èbós e Òunjẹ́ dos Òrìṣà",
+        preco: "R$ 99,99",
+        precoEbook: "R$ 99,99",
+        precoFisico: "R$ 199,99",
+        imagem: "combo_adimu.png",
+        badges: [],
+        descricao: "Descubra os segredos das oferendas e da culinária ritual com este combo especial, reunindo os dois livros essenciais para a prática sagrada dos Òrìṣà. Aprenda a realizar èbós corretamente, respeitando fundamentos ancestrais, e prepare comidas sagradas que carregam o axé necessário para fortalecer sua conexão espiritual.",
+        destaques: [
+            "O Livro dos Èbós – Fundamentos Práticos",
+            "Òunjẹ́ Àṣẹ – Comidas Sagradas dos Òrìṣà",
+            "Aprenda a realizar èbós corretamente",
+            "Prepare comidas sagradas com axé",
+            "Fundamentos ancestrais respeitados",
+            "Fortalecimento da conexão espiritual"
+        ],
+        dados: {
+            "Livros Inclusos": "2 livros especializados",
+            "Foco": "Oferendas e culinária ritual",
+            "Formato Digital": "PDF com qualidade premium",
+            "Formato Físico": "Livros impressos",
+            "Público": "Praticantes e sacerdotes"
+        },
+        linkCompra: "https://pay.hotmart.com/Q101946674H",
+        linkEbook: "https://pay.hotmart.com/Q101946674H",
+        linkFisico: "https://pay.hotmart.com/A101946669X"
+    },
+    "combo-personalizado": {
+        titulo: "Combo Personalizado",
+        preco: "Sob Consulta",
+        precoEbook: "Sob Consulta",
+        precoFisico: "Sob Consulta",
+        imagem: "solicitar.jpg",
+        badges: ["Personalizado"],
+        descricao: "Crie seu combo ideal! Escolha exatamente os livros que você deseja estudar e receba um desconto especial. Entre em contato conosco pelo WhatsApp e monte sua coleção personalizada de acordo com seus interesses e necessidades de estudo.",
+        destaques: [
+            "Escolha os livros que desejar",
+            "Desconto progressivo por quantidade",
+            "Atendimento personalizado via WhatsApp",
+            "Combo montado sob medida",
+            "Preço especial negociado",
+            "Ideal para grupos de estudo"
+        ],
+        dados: {
+            "Tipo": "Combo Sob Medida",
+            "Livros": "Escolha livre",
+            "Desconto": "Progressivo por quantidade",
+            "Contato": "WhatsApp direto",
+            "Prazo": "Resposta em até 24h"
+        },
+        linkCompra: "https://wa.me/5592991549151?text=Olá! Gostaria de montar um combo personalizado de livros.",
+        linkEbook: "https://wa.me/5592991549151?text=Olá! Gostaria de montar um combo personalizado de livros digitais.",
+        linkFisico: "https://wa.me/5592991549151?text=Olá! Gostaria de montar um combo personalizado de livros físicos."
     }
 };
 
@@ -280,6 +362,283 @@ function abrirModal(produtoId) {
     // Mostrar modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Se for combo personalizado, mostrar configurador
+    const configurador = document.getElementById('combo-configurador');
+    const botoesPadrao = document.querySelector('.modal-acoes');
+    
+    if (produtoId === 'combo-personalizado') {
+        configurador.style.display = 'block';
+        botoesPadrao.style.display = 'none';
+        inicializarConfigurador();
+    } else {
+        configurador.style.display = 'none';
+        botoesPadrao.style.display = 'block';
+    }
+}
+
+// Dados dos livros individuais para o configurador
+const livrosDisponiveis = {
+    yoruba: {
+        nome: "Yorùbá Descomplicado",
+        imagem: "livro_yoruba.png",
+        precoEbook: 39.99,
+        precoFisico: 89.99
+    },
+    obi: {
+        nome: "Aprendendo a Jogar Obì",
+        imagem: "livro_obi.png",
+        precoEbook: 29.99,
+        precoFisico: 69.99
+    },
+    ewe: {
+        nome: "Èwé Òró I",
+        imagem: "livro_eweoro.png",
+        precoEbook: 29.99,
+        precoFisico: 69.99
+    },
+    ilu: {
+        nome: "Ilú Odára",
+        imagem: "ilu odara folha.png",
+        precoEbook: 24.99,
+        precoFisico: 64.99
+    },
+    odu: {
+        nome: "Odù no Èrìndílógún",
+        imagem: "livro_odus.jpg",
+        precoEbook: 34.99,
+        precoFisico: 79.99
+    },
+    ebos: {
+        nome: "O Livro dos Èbós",
+        imagem: "livro_ebos.jpg",
+        precoEbook: 39.99,
+        precoFisico: 89.99
+    },
+    ounje: {
+        nome: "Òunjẹ́ Àṣẹ",
+        imagem: "ounje.jpg",
+        precoEbook: 34.99,
+        precoFisico: 79.99
+    }
+};
+
+// Variáveis do configurador
+let formatoSelecionado = 'ebook';
+let livrosSelecionados = [];
+
+// Função para inicializar o configurador
+function inicializarConfigurador() {
+    const formatoRadios = document.querySelectorAll('input[name="formato"]');
+    const livrosGrid = document.getElementById('livros-grid');
+    
+    // Event listeners para mudança de formato
+    formatoRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            formatoSelecionado = this.value;
+            atualizarGridLivros();
+            atualizarResumo();
+        });
+    });
+    
+    // Inicializar grid de livros
+    atualizarGridLivros();
+    atualizarResumo();
+}
+
+// Função para atualizar o grid de livros
+function atualizarGridLivros() {
+    const livrosGrid = document.getElementById('livros-grid');
+    livrosGrid.innerHTML = '';
+    
+    Object.entries(livrosDisponiveis).forEach(([id, livro]) => {
+        const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
+        
+        const livroDiv = document.createElement('div');
+        livroDiv.className = 'livro-option';
+        livroDiv.innerHTML = `
+            <input type="checkbox" class="livro-checkbox" id="livro-${id}" data-livro="${id}">
+            <img src="${livro.imagem}" alt="${livro.nome}" class="livro-img">
+            <div class="livro-info">
+                <div class="livro-nome">${livro.nome}</div>
+                <div class="livro-preco">R$ ${preco.toFixed(2).replace('.', ',')}</div>
+            </div>
+        `;
+        
+        // Event listener para o checkbox
+        const checkbox = livroDiv.querySelector('.livro-checkbox');
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                livrosSelecionados.push(id);
+                livroDiv.classList.add('selected');
+            } else {
+                livrosSelecionados = livrosSelecionados.filter(livroId => livroId !== id);
+                livroDiv.classList.remove('selected');
+            }
+            atualizarResumo();
+        });
+        
+        // Event listener para clicar na div inteira
+        livroDiv.addEventListener('click', function(e) {
+            if (e.target !== checkbox) {
+                checkbox.click();
+            }
+        });
+        
+        livrosGrid.appendChild(livroDiv);
+    });
+}
+
+// Função para atualizar o resumo do pedido
+function atualizarResumo() {
+    const resumoItens = document.getElementById('resumo-itens');
+    const subtotalValor = document.getElementById('subtotal-valor');
+    const descontoValor = document.getElementById('desconto-valor');
+    const totalFinal = document.getElementById('total-final');
+    const btnSolicitar = document.getElementById('btn-solicitar-combo');
+    const btnEmail = document.getElementById('btn-enviar-email');
+    
+    if (livrosSelecionados.length === 0) {
+        resumoItens.innerHTML = '<p class="nenhum-item">Nenhum livro selecionado</p>';
+        subtotalValor.textContent = 'R$ 0,00';
+        descontoValor.textContent = '- R$ 0,00';
+        totalFinal.textContent = 'R$ 0,00';
+        btnSolicitar.disabled = true;
+        btnEmail.disabled = true;
+        return;
+    }
+    
+    // Calcular subtotal
+    let subtotal = 0;
+    const itensHtml = livrosSelecionados.map(livroId => {
+        const livro = livrosDisponiveis[livroId];
+        const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
+        subtotal += preco;
+        
+        return `
+            <div class="item-selecionado">
+                <span class="item-nome">${livro.nome}</span>
+                <span class="item-preco">R$ ${preco.toFixed(2).replace('.', ',')}</span>
+            </div>
+        `;
+    }).join('');
+    
+    // Calcular desconto (10%)
+    const desconto = subtotal * 0.1;
+    const total = subtotal - desconto;
+    
+    // Atualizar DOM
+    resumoItens.innerHTML = itensHtml;
+    subtotalValor.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+    descontoValor.textContent = `- R$ ${desconto.toFixed(2).replace('.', ',')}`;
+    totalFinal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+    btnSolicitar.disabled = false;
+    btnEmail.disabled = false;
+    
+    // Atualizar eventos dos botões
+    btnSolicitar.onclick = function() {
+        enviarPedidoWhatsApp(subtotal, desconto, total);
+    };
+    
+    btnEmail.onclick = function() {
+        enviarPedidoEmail(subtotal, desconto, total);
+    };
+}
+
+// Função para enviar pedido via WhatsApp
+function enviarPedidoWhatsApp(subtotal, desconto, total) {
+    const tipoLivro = formatoSelecionado === 'ebook' ? 'E-books Digitais' : 'Livros Físicos';
+    const livrosTexto = livrosSelecionados.map(livroId => {
+        const livro = livrosDisponiveis[livroId];
+        const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
+        return `📖 ${livro.nome} - R$ ${preco.toFixed(2).replace('.', ',')}`;
+    }).join('\n');
+    
+    const dataAtual = new Date().toLocaleDateString('pt-BR');
+    const horaAtual = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    
+    const mensagem = `� *COMBO PERSONALIZADO YORÙBÁ*
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🕐 *${dataAtual} às ${horaAtual}*
+
+� *Formato:* ${tipoLivro}
+� *Livros Selecionados:*
+
+${livrosTexto}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+💰 *RESUMO FINANCEIRO:*
+
+💵 Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}
+🎁 Desconto (10%): -R$ ${desconto.toFixed(2).replace('.', ',')}
+✨ *TOTAL FINAL: R$ ${total.toFixed(2).replace('.', ',')}*
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🙏🏽 Àṣẹ! Gostaria de finalizar este combo personalizado.
+
+Pode me enviar as instruções de pagamento?
+
+Aguardo seu retorno! 🙏🏽
+
+_Enviado via site Yorùbá History Channel_`;
+    
+    const numeroWhatsApp = '5592991549151'; // Número atualizado
+    const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    
+    window.open(linkWhatsApp, '_blank');
+}
+
+// Função para enviar pedido via Email
+function enviarPedidoEmail(subtotal, desconto, total) {
+    const tipoLivro = formatoSelecionado === 'ebook' ? 'E-books Digitais' : 'Livros Físicos';
+    const livrosTexto = livrosSelecionados.map(livroId => {
+        const livro = livrosDisponiveis[livroId];
+        const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
+        return `• ${livro.nome} - R$ ${preco.toFixed(2).replace('.', ',')}`;
+    }).join('\n');
+    
+    const dataAtual = new Date().toLocaleDateString('pt-BR');
+    const horaAtual = new Date().toLocaleTimeString('pt-BR');
+    
+    const assunto = encodeURIComponent('🎯 Solicitação de Combo Personalizado - Yorùbá History Channel');
+    
+    const corpoEmail = `📚 SOLICITAÇÃO DE COMBO PERSONALIZADO
+═══════════════════════════════════════
+
+📋 DETALHES DO PEDIDO:
+Data: ${dataAtual}
+Hora: ${horaAtual}
+Tipo: ${tipoLivro}
+
+📖 LIVROS SELECIONADOS:
+${livrosTexto}
+
+💰 RESUMO FINANCEIRO:
+Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}
+Desconto (10%): -R$ ${desconto.toFixed(2).replace('.', ',')}
+TOTAL FINAL: R$ ${total.toFixed(2).replace('.', ',')}
+
+═══════════════════════════════════════
+
+🙏 Olá! Gostaria de finalizar este combo personalizado.
+
+Por favor, enviem as instruções de pagamento e entrega.
+
+Aguardo retorno!
+
+Atenciosamente,
+[Cliente]
+
+═══════════════════════════════════════
+📱 WhatsApp: (92) 99154-9151
+📧 Email: yoruba.hc.oficial@gmail.com
+🌐 Site: Yorùbá History Channel`;
+    
+    const emailLink = `mailto:yoruba.hc.oficial@gmail.com?subject=${assunto}&body=${encodeURIComponent(corpoEmail)}`;
+    
+    window.open(emailLink, '_blank');
 }
 
 // Função para fechar o modal

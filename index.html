@@ -26,7 +26,7 @@
     <meta property="twitter:description" content="Descubra nossa coleção completa com livros de conhecimento ancestral Yorùbá, combos especiais e materiais espirituais do Bàbá Akindele. Coleção exclusiva de sabedoria milenar.">
     <meta property="twitter:image" content="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="vitrine-styles-new.css?v=20250903-precos">
+    <link rel="stylesheet" href="vitrine-styles-new.css?v=20250917-configurador">
     <link rel="stylesheet" href="tribal-patterns.css?v=20250831-2">
     <link rel="stylesheet" href="candomble-patterns.css?v=20250831-2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -75,13 +75,18 @@
                 </div>
                 
                 <div class="hero-nav">
-                    <a href="#livros" class="hero-btn">📚 Livros</a>
-                    <a href="#combos" class="hero-btn">🎁 Combos</a>
+                    <a href="#livros" class="hero-btn">📖 Livros</a>
+                    <a href="#combos" class="hero-btn">📚 Combos</a>
+                    <a href="#combopersonalizado" class="hero-btn">🎁 Combo Personalizado</a>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat">
-                        <span class="hero-stat-number">6</span>
+                        <span class="hero-stat-number">7</span>
                         <span class="hero-stat-label">Livros</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">5</span>
+                        <span class="hero-stat-label">Combos</span>
                     </div>
                     <div class="hero-stat">
                         <span class="hero-stat-number">100k+</span>
@@ -284,16 +289,16 @@
         <div class="container">
             <h2 class="section-title">🎁 Combos Especiais</h2>
             <div class="produtos-grid">
-                <!-- Combo 1: Combo Completo (ordem alfabética) -->
+                <!-- Combo 1: Combo 5 Livros (ordem alfabética) -->
                 <div class="produto-card combo-card" data-produto="combo-completo">
                     <div class="produto-image">
-                        <img src="combo_geral.png" alt="Combo Completo" loading="lazy">
+                        <img src="combo_geral.png" alt="Combo 5 Livros" loading="lazy">
                         <div class="produto-overlay">
                             <button class="btn-ver-detalhes">Comprar</button>
                         </div>
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-titulo">Combo Completo</h3>
+                        <h3 class="produto-titulo">Combo 5 Livros</h3>
                         <div class="produto-precos">
                             <div class="preco-opcao">
                                 <span class="preco-label">E-book</span>
@@ -358,6 +363,76 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Combo 4: Combo Completo 7 Livros -->
+                <div class="produto-card combo-card" data-produto="combo-completo-7">
+                    <div class="produto-image">
+                        <img src="combo_7.png" alt="Combo Completo – 7 Livros" loading="lazy">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Combo Completo – 7 Livros</h3>
+                        <div class="produto-precos">
+                            <div class="preco-opcao">
+                                <span class="preco-label">E-book</span>
+                                <span class="preco-original">R$ 349,93</span>
+                                <span class="preco-valor">R$ 269,99</span>
+                            </div>
+                            <div class="preco-opcao">
+                                <span class="preco-label">Livro físico</span>
+                                <span class="preco-original">R$ 679,93</span>
+                                <span class="preco-valor">R$ 549,99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo 5: Combo Oferendas -->
+                <div class="produto-card combo-card" data-produto="combo-oferendas">
+                    <div class="produto-image">
+                        <img src="combo_adimu.png" alt="Combo Oferendas" loading="lazy">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Comprar</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Combo Oferendas</h3>
+                        <div class="produto-precos">
+                            <div class="preco-opcao">
+                                <span class="preco-label">E-book</span>
+                                <span class="preco-original">R$ 129,98</span>
+                                <span class="preco-valor">R$ 99,99</span>
+                            </div>
+                            <div class="preco-opcao">
+                                <span class="preco-label">Livro físico</span>
+                                <span class="preco-original">R$ 239,98</span>
+                                <span class="preco-valor">R$ 199,99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo 6: Combo Personalizado -->
+                <div class="produto-card combo-card combo-personalizado" id="combopersonalizado" data-produto="combo-personalizado">
+                    <div class="produto-image">
+                        <img src="solicitar.jpg" alt="Combo Personalizado" loading="lazy">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Solicitar</button>
+                        </div>
+                        <div class="produto-badge personalizado">Personalizado</div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Combo Personalizado</h3>
+                        <div class="produto-precos">
+                            <div class="combo-descricao-personalizada">
+                                <p class="titulo-personalizado"><strong>Monte seu Combo Personalizado</strong></p>
+                                <p class="subtitulo-personalizado">Consulte todas as possibilidades de montar seu combo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -403,6 +478,106 @@
                             </div>
                         </div>
 
+                        <!-- Configurador de Combo Personalizado -->
+                        <div class="combo-configurador" id="combo-configurador" style="display: none;">
+                            <h4 class="configurador-titulo">🎯 Configure seu Combo Personalizado</h4>
+                            
+                            <!-- Layout em duas colunas -->
+                            <div class="configurador-layout">
+                                <!-- Coluna Esquerda - Escolhas -->
+                                <div class="configurador-escolhas">
+                                    <!-- Seleção de Formato -->
+                                    <div class="formato-selection">
+                                        <h5>Escolha o formato:</h5>
+                                        <div class="formato-opcoes">
+                                            <label class="formato-opcao">
+                                                <input type="radio" name="formato" value="ebook" checked>
+                                                📱 E-books Digitais
+                                            </label>
+                                            <label class="formato-opcao">
+                                                <input type="radio" name="formato" value="fisico">
+                                                📚 Livros Físicos
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Seleção de Livros -->
+                                    <div class="livros-selection">
+                                        <h5>Selecione os livros desejados:</h5>
+                                        <div class="livros-grid" id="livros-grid">
+                                            <!-- Os livros serão inseridos dinamicamente via JavaScript -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Coluna Direita - Resumo -->
+                                <div class="configurador-resumo">
+                                    <div class="resumo-pedido">
+                                        <h4>📋 Resumo do Combo</h4>
+                                        <div id="resumo-itens">
+                                            <p class="nenhum-item">Nenhum livro selecionado</p>
+                                        </div>
+                                        <div class="resumo-valores">
+                                            <div class="valor-linha">
+                                                <span>Subtotal:</span>
+                                                <span id="subtotal-valor">R$ 0,00</span>
+                                            </div>
+                                            <div class="valor-linha">
+                                                <span>Desconto:</span>
+                                                <span id="desconto-valor">R$ 0,00</span>
+                                            </div>
+                                            <div class="valor-linha total">
+                                                <span>Total Final:</span>
+                                                <span id="total-final">R$ 0,00</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Botão de Solicitar -->
+                                        <div class="solicitar-combo">
+                                            <button id="btn-solicitar-combo" class="btn-solicitar-unico" disabled>
+                                                <i class="fas fa-paper-plane"></i>
+                                                Solicitar Combo Personalizado
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Informações da Solicitação -->
+                            <div class="info-solicitacao">
+                                <h5>📋 Informações para Solicitação</h5>
+                                <div class="info-grid">
+                                    <div class="info-card ebook">
+                                        <h6>📱 E-books Digitais</h6>
+                                        <ul>
+                                            <li>• Entrega imediata por email</li>
+                                            <li>• Formato PDF otimizado para leitura</li>
+                                            <li>• Acesso vitalício ao conteúdo</li>
+                                            <li>• Compatível com todos os dispositivos</li>
+                                        </ul>
+                                    </div>
+                                    <div class="info-card fisico">
+                                        <h6>� Livros Físicos</h6>
+                                        <ul>
+                                            <li>• Entrega via Correios em todo Brasil</li>
+                                            <li>• Prazo: 7 a 15 dias úteis</li>
+                                            <li>• Frete calculado conforme região</li>
+                                            <li>• Embalagem segura e cuidadosa</li>
+                                        </ul>
+                                    </div>
+                                    <div class="info-card geral">
+                                        <h6>� Formas de Pagamento</h6>
+                                        <ul>
+                                            <li>• PIX (5% de desconto adicional)</li>
+                                            <li>• Cartão de crédito em até 12x</li>
+                                            <li>• Boleto bancário à vista</li>
+                                            <li>• PayPal (clientes internacionais)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="modal-descricao">
                             <p id="modal-descricao-texto"></p>
                         </div>
@@ -413,6 +588,177 @@
                 <div class="modal-detalhes">
                     <div class="modal-destaques" id="modal-destaques"></div>
                     <div class="modal-dados" id="modal-dados"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Específico para Combo Personalizado -->
+    <div class="modal-personalizado" id="modal-combo-personalizado" aria-modal="true" role="dialog" tabindex="-1">
+        <div class="modal-personalizado-overlay" id="modal-personalizado-overlay"></div>
+        <div class="modal-personalizado-content">
+            <button class="modal-personalizado-close" id="modal-personalizado-close" aria-label="Fechar configurador">×</button>
+            
+            <!-- Corpo do Modal Personalizado -->
+            <div class="modal-personalizado-body">
+                <!-- Título do Configurador -->
+                <div class="configurador-titulo-section">
+                    <h2>Monte seu Combo Personalizado</h2>
+                    <p>Selecione o formato e escolha seus livros</p>
+                </div>
+                
+                <!-- Seleção de Formato (Cards horizontais) -->
+                <div class="formato-section">
+                    <h3>📖 Escolha o Formato</h3>
+                    <div class="formato-cards">
+                        <div class="formato-card" data-formato="ebook">
+                            <div class="formato-icon">📱</div>
+                            <div class="formato-info">
+                                <h4>E-books Digitais</h4>
+                                <p>Acesso imediato e prático</p>
+                            </div>
+                            <div class="formato-check">
+                                <input type="radio" name="formato-personalizado" value="ebook" checked>
+                                <span class="checkmark"></span>
+                            </div>
+                        </div>
+                        <div class="formato-card" data-formato="fisico">
+                            <div class="formato-icon">📚</div>
+                            <div class="formato-info">
+                                <h4>Livros Físicos</h4>
+                                <p>Experiência tátil tradicional</p>
+                            </div>
+                            <div class="formato-check">
+                                <input type="radio" name="formato-personalizado" value="fisico">
+                                <span class="checkmark"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layout Principal -->
+                <div class="configurador-personalizado-layout">
+                    <!-- Seção de Seleção de Livros -->
+                    <div class="livros-section">
+                        <h3>📚 Selecione seus Livros</h3>
+                        <div class="livros-personalizado-grid" id="livros-personalizado-grid">
+                            <!-- Os livros serão inseridos dinamicamente -->
+                        </div>
+                    </div>
+
+                    <!-- Seção de Resumo -->
+                    <div class="resumo-section">
+                        <div class="resumo-personalizado">
+                            <h3>📋 Seu Combo</h3>
+                            
+                            <!-- Lista de itens selecionados -->
+                            <div class="itens-selecionados" id="itens-personalizado-selecionados">
+                                <div class="nenhum-item-personalizado">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Selecione livros para montar seu combo</p>
+                                </div>
+                            </div>
+
+                            <!-- Cálculo de valores -->
+                            <div class="valores-personalizado">
+                                <div class="valor-linha">
+                                    <span>Quantidade:</span>
+                                    <span id="quantidade-personalizado">0 livros</span>
+                                </div>
+                                <div class="valor-linha">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotal-personalizado">R$ 0,00</span>
+                                </div>
+                                <div class="valor-linha desconto-linha" id="desconto-linha-personalizado" style="display: none;">
+                                    <span>Desconto <span id="desconto-percentual-personalizado">(0%)</span>:</span>
+                                    <span id="desconto-personalizado">-R$ 0,00</span>
+                                </div>
+                                <div class="valor-linha total-linha">
+                                    <span>Total Final:</span>
+                                    <span id="total-personalizado">R$ 0,00</span>
+                                </div>
+                            </div>
+
+                            <!-- Dados do Cliente -->
+                            <div class="dados-cliente-personalizado">
+                                <h4>📋 Seus Dados</h4>
+                                
+                                <div class="campo-grupo">
+                                    <label for="whatsapp-personalizado">
+                                        <i class="fab fa-whatsapp"></i>
+                                        WhatsApp *
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="whatsapp-personalizado" 
+                                        placeholder="(11) 99999-9999"
+                                        maxlength="15"
+                                        required
+                                    >
+                                    <span class="campo-erro" id="whatsapp-erro"></span>
+                                </div>
+                                
+                                <div class="campo-grupo">
+                                    <label for="email-personalizado">
+                                        <i class="fas fa-envelope"></i>
+                                        E-mail *
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email-personalizado" 
+                                        placeholder="seu@email.com"
+                                        required
+                                    >
+                                    <span class="campo-erro" id="email-erro"></span>
+                                </div>
+                            </div>
+
+                            <!-- Botão de Solicitar -->
+                            <button id="btn-solicitar-personalizado" class="btn-solicitar-personalizado" disabled>
+                                <i class="fas fa-paper-plane"></i>
+                                Solicitar Combo Personalizado
+                            </button>
+
+                            <!-- Informações de contato -->
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Informações Importantes da Solicitação -->
+                <div class="informacoes-solicitacao">
+                    <h4>📋 Informações Importantes</h4>
+                    
+                    <div class="info-grid">
+                        <!-- E-books -->
+                        <div class="info-card ebook-info">
+                            <h5>📱 E-books Digitais</h5>
+                            <ul>
+                                <li>🚀 <strong>Acesso imediato</strong> após o pagamento</li>
+                                <li>📧 Link enviado em <strong>até 3 horas</strong> após confirmação</li>
+                                <li>💳 Todas as formas de pagamento do site</li>
+                                <li>🛡️ <strong>7 dias de garantia</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Livros Físicos -->
+                        <div class="info-card fisico-info">
+                            <h5>📚 Livros Físicos</h5>
+                            <ul>
+                                <li>📦 Link de compra enviado em <strong>até 24 horas</strong></li>
+                                <li>🚚 <strong>Frete:</strong> conferir durante compra pela Hotmart</li>
+                                <li>⏱️ <strong>Produção:</strong> 3 a 7 dias</li>
+                                <li>🚛 <strong>Entrega:</strong> depende da opção escolhida</li>
+                                <li>💳 Todas as formas de pagamento do site</li>
+                                <li>🛡️ <strong>7 dias de garantia</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="garantia-destaque">
+                        <i class="fas fa-shield-alt"></i>
+                        <span><strong>Garantia Total:</strong> 7 dias para solicitar reembolso sem questionamentos</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -607,5 +953,9 @@
             }
         });
     </script>
+    
+    <!-- EmailJS para envio automático de emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="emailjs-config.js"></script>
 </body>
 </html>

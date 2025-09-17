@@ -222,7 +222,7 @@ const produtos = {
         linkFisico: "https://pay.hotmart.com/X101033177I"
     },
     "combo-completo": {
-        titulo: "Combo Completo",
+        titulo: "Combo 5 Livros",
         preco: "R$ 149,99",
         precoEbook: "R$ 149,99",
         precoEbookOriginal: "R$ 209,95",
@@ -251,6 +251,36 @@ const produtos = {
         linkEbook: "https://pay.hotmart.com/W101256979E",
         linkFisico: "https://pay.hotmart.com/U101256572A"
     },
+    "combo-completo-7": {
+        titulo: "Combo Completo – 7 Livros de Sabedoria Yorùbá",
+        preco: "R$ 269,99",
+        precoEbook: "R$ 269,99",
+        precoEbookOriginal: "R$ 349,93",
+        precoFisico: "R$ 549,99",
+        precoFisicoOriginal: "R$ 679,93",
+        imagem: "combo_7.png",
+        badges: [],
+        descricao: "Descubra a riqueza completa da tradição yorùbá com esta coleção definitiva de 7 livros, reunindo os ensinamentos mais essenciais da Yorùbá History Channel. Explore oráculos sagrados, a língua ritual, folhas sagradas, ritmos dos tambores e aprenda os fundamentos dos èbós e das comidas sagradas dos Òrìṣà.",
+        destaques: [
+            "Odù no Ẹ́ẹ́rìndínlógún – Caminhos, Conselhos e Mistérios",
+            "Aprendendo a Jogar Obì – O Oráculo Sagrado dos Òrìṣà",
+            "Yorùbá Descomplicado – Uso em Rituais Sagrados",
+            "Èwé Òró – Folhas de Fundamento I",
+            "Ilú Odára – Ritmo, Tradição e Fé",
+            "O Livro dos Èbós – Fundamentos Práticos",
+            "Òunjẹ́ Àṣẹ – Comidas Sagradas dos Òrìṣà"
+        ],
+        dados: {
+            "Livros Inclusos": "7 livros completos",
+            "Valor Individual E-book": "R$ 349,93",
+            "Valor Individual Físico": "R$ 679,93",
+            "Formato": "Digital (PDF) / Físico Premium",
+            "Acesso": "Imediato / 5-10 dias úteis"
+        },
+        linkCompra: "https://pay.hotmart.com/O101946657W",
+        linkEbook: "https://pay.hotmart.com/O101946657W",
+        linkFisico: "https://pay.hotmart.com/F101946521G"
+    },
     "combo-oraculo": {
         titulo: "Combo Oráculo",
         preco: "R$ 59,99",
@@ -278,6 +308,51 @@ const produtos = {
         linkCompra: "https://pay.hotmart.com/W101256953G",
         linkEbook: "https://pay.hotmart.com/W101256953G",
         linkFisico: "https://pay.hotmart.com/E101255523Y"
+    },
+    "combo-oferendas": {
+        titulo: "Combo Oferendas – Èbós e Òunjẹ́ dos Òrìṣà",
+        preco: "R$ 99,99",
+        precoEbook: "R$ 99,99",
+        precoEbookOriginal: "R$ 129,98",
+        precoFisico: "R$ 199,99",
+        precoFisicoOriginal: "R$ 239,98",
+        imagem: "combo_adimu.png",
+        badges: [],
+        descricao: "Descubra os segredos das oferendas e da culinária ritual com este combo especial, reunindo os dois livros essenciais para a prática sagrada dos Òrìṣà. Aprenda a realizar èbós corretamente e prepare comidas sagradas que carregam o axé necessário.",
+        destaques: [
+            "O Livro dos Èbós – Fundamentos Práticos",
+            "Òunjẹ́ Àṣẹ – Comidas Sagradas dos Òrìṣà",
+            "Aprenda a realizar èbós corretamente",
+            "Prepare comidas sagradas com axé",
+            "Fundamentos ancestrais respeitados",
+            "Economia de R$ 29,99"
+        ],
+        dados: {
+            "Livros Inclusos": "2 livros especializados",
+            "Valor Individual E-book": "R$ 129,98",
+            "Valor Individual Físico": "R$ 239,98",
+            "Formato": "Digital (PDF) / Físico",
+            "Acesso": "Imediato / 5-10 dias úteis"
+        },
+        linkCompra: "https://pay.hotmart.com/Q101946674H",
+        linkEbook: "https://pay.hotmart.com/Q101946674H",
+        linkFisico: "https://pay.hotmart.com/A101946669X"
+    },
+    "combo-personalizado": {
+        titulo: "Combo Personalizado",
+        preco: "Sob Consulta",
+        precoEbook: "Sob Consulta",
+        precoEbookOriginal: "Economia Garantida",
+        precoFisico: "Sob Consulta",
+        precoFisicoOriginal: "Desconto Progressivo",
+        imagem: "",
+        badges: ["Personalizado"],
+        descricao: "",
+        destaques: [],
+        dados: {},
+        linkCompra: "https://wa.me/5592991549151?text=Olá! Gostaria de montar um combo personalizado de livros.",
+        linkEbook: "https://wa.me/5592991549151?text=Olá! Gostaria de montar um combo personalizado de livros digitais.",
+        linkFisico: "https://wa.me/5592991549151?text=Olá! Gostaria de montar um combo personalizado de livros físicos."
     }
 };
 
@@ -327,6 +402,17 @@ function abrirModal(produtoId) {
         modalSubtitulo.style.display = subtitulo ? 'block' : 'none';
     }
     if (modalDescricao) modalDescricao.textContent = produto.descricao;
+    
+    // Esconder imagem e descrição para combo personalizado
+    const modalImageContainer = document.querySelector('.modal-image');
+    const modalDescricaoContainer = document.querySelector('.modal-descricao');
+    if (produtoId === 'combo-personalizado') {
+        if (modalImageContainer) modalImageContainer.style.display = 'none';
+        if (modalDescricaoContainer) modalDescricaoContainer.style.display = 'none';
+    } else {
+        if (modalImageContainer) modalImageContainer.style.display = 'block';
+        if (modalDescricaoContainer) modalDescricaoContainer.style.display = 'block';
+    }
     
     // Configurar botões de compra com onclick
     console.log('Configurando botões - LinkEbook:', produto.linkEbook, 'LinkFisico:', produto.linkFisico);
@@ -380,37 +466,64 @@ function abrirModal(produtoId) {
 
     // Destaques
     if (modalDestaques) {
-        modalDestaques.innerHTML = `
-            <h4>📋 Destaques:</h4>
-            <ul>
-                ${produto.destaques.map(destaque => `<li>• ${destaque}</li>`).join('')}
-            </ul>
-        `;
+        if (produtoId === 'combo-personalizado') {
+            modalDestaques.style.display = 'none';
+        } else {
+            modalDestaques.style.display = 'block';
+            modalDestaques.innerHTML = `
+                <h4>📋 Destaques:</h4>
+                <ul>
+                    ${produto.destaques.map(destaque => `<li>• ${destaque}</li>`).join('')}
+                </ul>
+            `;
+        }
     }
 
     // Dados técnicos
     if (modalDados) {
-        modalDados.innerHTML = `
-            <h4>📊 Dados Técnicos:</h4>
-            <div class="dados-grid">
-                ${Object.entries(produto.dados).map(([chave, valor]) => `
+        if (produtoId === 'combo-personalizado') {
+            modalDados.style.display = 'none';
+        } else {
+            modalDados.style.display = 'block';
+            modalDados.innerHTML = `
+                <h4>📊 Dados Técnicos:</h4>
+                <div class="dados-grid">
+                    ${Object.entries(produto.dados).map(([chave, valor]) => `
+                        <div class="dado-item">
+                            <strong>${chave}:</strong> ${valor}
+                        </div>
+                    `).join('')}
                     <div class="dado-item">
-                        <strong>${chave}:</strong> ${valor}
+                        <strong>Acesso:</strong> Ebook (imediato) / Livro (de 5 a 15 dias úteis)
                     </div>
-                `).join('')}
-                <div class="dado-item">
-                    <strong>Acesso:</strong> Ebook (imediato) / Livro (de 5 a 15 dias úteis)
+                    <div class="dado-item">
+                        <strong>Frete:</strong> Livro físico - calcular na compra
+                    </div>
                 </div>
-                <div class="dado-item">
-                    <strong>Frete:</strong> Livro físico - calcular na compra
-                </div>
-            </div>
-        `;
+            `;
+        }
     }
 
-    // Mostrar modal
+    // Se for combo personalizado, abrir o modal específico
+    if (produtoId === 'combo-personalizado') {
+        abrirModalPersonalizado();
+        return;
+    }
+
+    // Mostrar modal padrão para outros produtos
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Esconder configurador e mostrar botões padrão
+    const configurador = document.getElementById('combo-configurador');
+    const botoesPadrao = document.querySelector('.modal-acoes');
+    
+    if (configurador) {
+        configurador.style.display = 'none';
+    }
+    if (botoesPadrao) {
+        botoesPadrao.style.display = 'flex';
+    }
 }
 
 // Função para fechar o modal
@@ -594,4 +707,875 @@ document.addEventListener('DOMContentLoaded', function() {
             window.scrollTo({top: 0, behavior: 'smooth'}); 
         };
     }
+});
+
+// ========================================
+// CONFIGURADOR DE COMBO PERSONALIZADO
+// ========================================
+
+// Dados dos livros individuais para o configurador
+const livrosDisponiveis = {
+    yoruba: {
+        nome: "Yorùbá Descomplicado",
+        imagem: "livro_yoruba.png",
+        precoEbook: 49.99,
+        precoFisico: 99.99
+    },
+    obi: {
+        nome: "Aprendendo a Jogar Obì",
+        imagem: "livro_obi.png",
+        precoEbook: 39.99,
+        precoFisico: 79.99
+    },
+    ewe: {
+        nome: "Èwé Òró I",
+        imagem: "livro_eweoro.png",
+        precoEbook: 39.99,
+        precoFisico: 79.99
+    },
+    ilu: {
+        nome: "Ilú Odára",
+        imagem: "ilu odara folha.png",
+        precoEbook: 34.99,
+        precoFisico: 74.99
+    },
+    odu: {
+        nome: "Odù no Èrìndílógún",
+        imagem: "livro_odus.jpg",
+        precoEbook: 44.99,
+        precoFisico: 94.99
+    },
+    ebos: {
+        nome: "O Livro dos Èbós",
+        imagem: "livro_ebos.jpg",
+        precoEbook: 79.99,
+        precoFisico: 129.99
+    },
+    ounje: {
+        nome: "Òunjẹ́ Àṣẹ",
+        imagem: "ounje.jpg",
+        precoEbook: 59.99,
+        precoFisico: 109.99
+    }
+};
+
+// Variáveis do configurador
+let formatoSelecionado = 'ebook';
+let livrosSelecionados = [];
+
+// Função para calcular desconto progressivo
+function calcularDescontoProgressivo(quantidadeLivros) {
+    if (quantidadeLivros >= 6) return 0.20; // 20% para 6-7 livros
+    if (quantidadeLivros >= 3) return 0.15; // 15% para 3-5 livros
+    if (quantidadeLivros >= 2) return 0.10; // 10% para 2 livros
+    return 0; // Sem desconto para 1 livro
+}
+
+// Função para obter texto do desconto
+function obterTextoDesconto(quantidadeLivros) {
+    if (quantidadeLivros >= 6) return "20%";
+    if (quantidadeLivros >= 3) return "15%";
+    if (quantidadeLivros >= 2) return "10%";
+    return "0%";
+}
+
+// Função para inicializar o configurador
+function inicializarConfigurador() {
+    const formatoRadios = document.querySelectorAll('input[name="formato"]');
+    const livrosGrid = document.getElementById('livros-grid');
+    const livrosSelection = document.querySelector('.livros-selection');
+    const configuradorEscolhas = document.querySelector('.configurador-escolhas');
+    
+    // Reset das variáveis
+    formatoSelecionado = '';
+    livrosSelecionados = [];
+    
+    // Esconder seção de livros inicialmente
+    if (livrosSelection) {
+        livrosSelection.style.display = 'none';
+    }
+    
+    // Adicionar placeholder visual
+    const placeholder = document.createElement('div');
+    placeholder.className = 'formato-placeholder';
+    placeholder.id = 'formato-placeholder';
+    placeholder.innerHTML = `
+        <div style="text-align: center; padding: 30px 20px;">
+            <i class="fas fa-arrow-up" style="font-size: 2rem; color: #10b981; margin-bottom: 15px;"></i>
+            <h4 style="color: #374151; margin-bottom: 10px;">Primeiro, escolha o formato</h4>
+            <p style="color: #6b7280; font-size: 0.9rem;">Selecione se deseja <strong>E-books Digitais</strong> ou <strong>Livros Físicos</strong> para ver os títulos disponíveis</p>
+        </div>
+    `;
+    if (configuradorEscolhas && !document.getElementById('formato-placeholder')) {
+        configuradorEscolhas.appendChild(placeholder);
+    }
+    
+    // Desmarcar todos os radios inicialmente
+    formatoRadios.forEach(radio => {
+        radio.checked = false;
+    });
+    
+    // Event listeners para mudança de formato
+    formatoRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            formatoSelecionado = this.value;
+            
+            // Remover placeholder
+            const placeholderEl = document.getElementById('formato-placeholder');
+            if (placeholderEl) {
+                placeholderEl.remove();
+            }
+            
+            // Mostrar seção de livros quando formato for selecionado
+            if (livrosSelection) {
+                livrosSelection.style.display = 'block';
+            }
+            
+            atualizarGridLivros();
+            atualizarResumo();
+        });
+    });
+    
+    // Não inicializar grid de livros automaticamente
+    atualizarResumo();
+}
+
+// Função para atualizar o grid de livros
+function atualizarGridLivros() {
+    const livrosGrid = document.getElementById('livros-grid');
+    if (!livrosGrid) return;
+    
+    livrosGrid.innerHTML = '';
+    
+    Object.entries(livrosDisponiveis).forEach(([id, livro]) => {
+        const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
+        
+        const livroDiv = document.createElement('div');
+        livroDiv.className = 'livro-option';
+        livroDiv.innerHTML = `
+            <input type="checkbox" class="livro-checkbox" id="livro-${id}" data-livro="${id}">
+            <img src="${livro.imagem}" alt="${livro.nome}" class="livro-img">
+            <div class="livro-info">
+                <div class="livro-nome">${livro.nome}</div>
+                <div class="livro-preco">R$ ${preco.toFixed(2).replace('.', ',')}</div>
+            </div>
+        `;
+        
+        // Event listener para o checkbox
+        const checkbox = livroDiv.querySelector('.livro-checkbox');
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                livrosSelecionados.push(id);
+                livroDiv.classList.add('selected');
+            } else {
+                livrosSelecionados = livrosSelecionados.filter(livroId => livroId !== id);
+                livroDiv.classList.remove('selected');
+            }
+            atualizarResumo();
+        });
+        
+        // Event listener para clicar na div inteira
+        livroDiv.addEventListener('click', function(e) {
+            if (e.target !== checkbox) {
+                checkbox.click();
+            }
+        });
+        
+        livrosGrid.appendChild(livroDiv);
+    });
+}
+
+// Função para atualizar o resumo do pedido
+function atualizarResumo() {
+    const resumoItens = document.getElementById('resumo-itens');
+    const subtotalValor = document.getElementById('subtotal-valor');
+    const descontoValor = document.getElementById('desconto-valor');
+    const totalFinal = document.getElementById('total-final');
+    const btnSolicitar = document.getElementById('btn-solicitar-combo');
+    
+    if (!resumoItens || !subtotalValor || !descontoValor || !totalFinal || !btnSolicitar) return;
+    
+    // Se nenhum formato foi selecionado
+    if (!formatoSelecionado) {
+        resumoItens.innerHTML = '<p class="nenhum-item">Selecione um formato primeiro</p>';
+        subtotalValor.textContent = 'R$ 0,00';
+        descontoValor.textContent = '- R$ 0,00';
+        totalFinal.textContent = 'R$ 0,00';
+        btnSolicitar.disabled = true;
+        return;
+    }
+    
+    if (livrosSelecionados.length === 0) {
+        resumoItens.innerHTML = '<p class="nenhum-item">Nenhum livro selecionado</p>';
+        subtotalValor.textContent = 'R$ 0,00';
+        descontoValor.textContent = '- R$ 0,00';
+        totalFinal.textContent = 'R$ 0,00';
+        btnSolicitar.disabled = true;
+        return;
+    }
+    
+    // Calcular subtotal
+    let subtotal = 0;
+    const itensHtml = livrosSelecionados.map(livroId => {
+        const livro = livrosDisponiveis[livroId];
+        const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
+        subtotal += preco;
+        
+        return `
+            <div class="item-selecionado">
+                <span class="item-nome">${livro.nome}</span>
+                <span class="item-preco">R$ ${preco.toFixed(2).replace('.', ',')}</span>
+            </div>
+        `;
+    }).join('');
+    
+    // Calcular desconto progressivo
+    const percentualDesconto = calcularDescontoProgressivo(livrosSelecionados.length);
+    const desconto = subtotal * percentualDesconto;
+    const total = subtotal - desconto;
+    
+    // Atualizar DOM
+    resumoItens.innerHTML = itensHtml;
+    subtotalValor.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+    
+    // Mostrar desconto com percentual
+    const textoDesconto = obterTextoDesconto(livrosSelecionados.length);
+    if (percentualDesconto > 0) {
+        descontoValor.textContent = `- R$ ${desconto.toFixed(2).replace('.', ',')} (${textoDesconto})`;
+    } else {
+        descontoValor.textContent = `R$ 0,00 (Desconto a partir de 2 livros)`;
+    }
+    
+    totalFinal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+    btnSolicitar.disabled = false;
+    
+    // Atualizar evento do botão único
+    btnSolicitar.onclick = function() {
+        enviarPedidoCompletoPersonalizado(subtotal, desconto, total, percentualDesconto);
+    };
+}
+
+// Função para enviar pedido completo (WhatsApp + Email automático)
+function enviarPedidoCompletoPersonalizado(subtotal, desconto, total, percentualDesconto) {
+    // Abrir WhatsApp primeiro
+    enviarPedidoWhatsApp(subtotal, desconto, total, percentualDesconto);
+    
+    // Aguardar um breve momento e abrir email automaticamente
+    setTimeout(() => {
+        enviarPedidoEmail(subtotal, desconto, total, percentualDesconto);
+    }, 1000); // 1 segundo de delay para dar tempo do WhatsApp abrir
+}
+
+// Função para enviar pedido via WhatsApp
+function enviarPedidoWhatsApp(subtotal, desconto, total, percentualDesconto) {
+    const tipoLivro = formatoSelecionado === 'ebook' ? 'E-books Digitais' : 'Livros Físicos';
+    const livrosTexto = livrosSelecionados.map(livroId => {
+        const livro = livrosDisponiveis[livroId];
+        const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
+        return `📖 ${livro.nome} - R$ ${preco.toFixed(2).replace('.', ',')}`;
+    }).join('\n');
+    
+    const dataAtual = new Date().toLocaleDateString('pt-BR');
+    const horaAtual = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    const textoDesconto = obterTextoDesconto(livrosSelecionados.length);
+    
+    const mensagem = `🌟 *COMBO PERSONALIZADO YORÙBÁ*
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🕐 *${dataAtual} às ${horaAtual}*
+
+📱 *Formato:* ${tipoLivro}
+📚 *Livros Selecionados:*
+
+${livrosTexto}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+💰 *RESUMO FINANCEIRO:*
+
+💵 Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}
+🎁 Desconto (${textoDesconto}): -R$ ${desconto.toFixed(2).replace('.', ',')}
+✨ *TOTAL FINAL: R$ ${total.toFixed(2).replace('.', ',')}*
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🙏🏽 Àṣẹ! Gostaria de finalizar este combo personalizado.
+
+Pode me enviar as instruções de pagamento?
+
+Aguardo seu retorno! 🙏🏽
+
+_Enviado via site Yorùbá History Channel_`;
+    
+    const numeroWhatsApp = '5592991549151';
+    const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    
+    window.open(linkWhatsApp, '_blank');
+}
+
+// Função para enviar pedido via Email
+function enviarPedidoEmail(subtotal, desconto, total, percentualDesconto) {
+    const tipoLivro = formatoSelecionado === 'ebook' ? 'E-books Digitais' : 'Livros Físicos';
+    const livrosTexto = livrosSelecionados.map(livroId => {
+        const livro = livrosDisponiveis[livroId];
+        const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
+        return `• ${livro.nome} - R$ ${preco.toFixed(2).replace('.', ',')}`;
+    }).join('\n');
+    
+    const dataAtual = new Date().toLocaleDateString('pt-BR');
+    const horaAtual = new Date().toLocaleTimeString('pt-BR');
+    const textoDesconto = obterTextoDesconto(livrosSelecionados.length);
+    
+    const assunto = encodeURIComponent('🎯 Solicitação de Combo Personalizado - Yorùbá History Channel');
+    
+    const corpoEmail = `📚 SOLICITAÇÃO DE COMBO PERSONALIZADO
+═══════════════════════════════════════
+
+📋 DETALHES DO PEDIDO:
+Data: ${dataAtual}
+Hora: ${horaAtual}
+Tipo: ${tipoLivro}
+
+📖 LIVROS SELECIONADOS:
+${livrosTexto}
+
+💰 RESUMO FINANCEIRO:
+Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}
+Desconto (${textoDesconto}): -R$ ${desconto.toFixed(2).replace('.', ',')}
+TOTAL FINAL: R$ ${total.toFixed(2).replace('.', ',')}
+
+═══════════════════════════════════════
+
+🙏 Olá! Gostaria de finalizar este combo personalizado.
+
+Por favor, enviem as instruções de pagamento e entrega.
+
+Aguardo retorno!
+
+Atenciosamente,
+[Cliente]`;
+
+    const emailLink = `mailto:yoruba.hc.oficial@gmail.com?subject=${assunto}&body=${encodeURIComponent(corpoEmail)}`;
+    
+    window.open(emailLink, '_blank');
+}
+
+// =========================================
+// MODAL PERSONALIZADO - COMBO CONFIGURADOR
+// =========================================
+
+// Estado do configurador personalizado
+let configuradorPersonalizadoEstado = {
+    formato: 'ebook',
+    livrosSelecionados: new Set(),
+    precos: {
+        ebook: {
+            'yoruba': 49.99,
+            'obi': 39.99,
+            'ewe': 39.99,
+            'ilu': 34.99,
+            'odu': 44.99,
+            'ebos': 79.99,
+            'ounje': 59.99
+        },
+        fisico: {
+            'yoruba': 99.99,
+            'obi': 79.99,
+            'ewe': 79.99,
+            'ilu': 74.99,
+            'odu': 94.99,
+            'ebos': 129.99,
+            'ounje': 109.99
+        }
+    }
+};
+
+// Função para abrir o modal personalizado
+function abrirModalPersonalizado() {
+    const modal = document.getElementById('modal-combo-personalizado');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Inicializar o configurador personalizado
+        inicializarConfiguradorPersonalizado();
+    }
+}
+
+// Função para fechar o modal personalizado
+function fecharModalPersonalizado() {
+    const modal = document.getElementById('modal-combo-personalizado');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Resetar estado
+        resetarConfiguradorPersonalizado();
+    }
+}
+
+// Função para resetar o configurador
+function resetarConfiguradorPersonalizado() {
+    configuradorPersonalizadoEstado.livrosSelecionados.clear();
+    configuradorPersonalizadoEstado.formato = 'ebook';
+    
+    // Limpar grid de livros
+    const grid = document.getElementById('livros-personalizado-grid');
+    if (grid) {
+        grid.innerHTML = '<p style="text-align: center; color: #666; padding: 2rem;">Selecione um formato para ver os livros disponíveis</p>';
+    }
+    
+    // Resetar seleções visuais
+    document.querySelectorAll('.formato-card').forEach(card => {
+        card.classList.remove('selected');
+    });
+    
+    document.querySelector('.formato-card[data-formato="ebook"]').classList.add('selected');
+    document.querySelector('input[name="formato-personalizado"][value="ebook"]').checked = true;
+    
+    atualizarResumoPersonalizado();
+}
+
+// Função para inicializar o configurador personalizado
+function inicializarConfiguradorPersonalizado() {
+    // Configurar eventos dos cards de formato
+    document.querySelectorAll('.formato-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const formato = card.dataset.formato;
+            
+            // Remover seleção anterior
+            document.querySelectorAll('.formato-card').forEach(c => c.classList.remove('selected'));
+            
+            // Adicionar seleção atual
+            card.classList.add('selected');
+            document.querySelector(`input[name="formato-personalizado"][value="${formato}"]`).checked = true;
+            
+            // Atualizar estado
+            configuradorPersonalizadoEstado.formato = formato;
+            
+            // Gerar grid de livros (só aparece após selecionar formato)
+            gerarGridLivrosPersonalizado();
+            
+            // Atualizar preços dos livros
+            atualizarPrecosLivros();
+            atualizarResumoPersonalizado();
+        });
+    });
+    
+    // Configurar botão de solicitar
+    const btnSolicitar = document.getElementById('btn-solicitar-personalizado');
+    if (btnSolicitar) {
+        btnSolicitar.addEventListener('click', solicitarComboPersonalizadoCompleto);
+    }
+    
+    // Configurar validação dos campos de cliente
+    configurarValidacaoCliente();
+    
+    // Configurar eventos de fechar
+    const btnFechar = document.getElementById('modal-personalizado-close');
+    const overlay = document.getElementById('modal-personalizado-overlay');
+    
+    if (btnFechar) {
+        btnFechar.addEventListener('click', fecharModalPersonalizado);
+    }
+    
+    if (overlay) {
+        overlay.addEventListener('click', fecharModalPersonalizado);
+    }
+    
+    // Inicializar grid vazio
+    const grid = document.getElementById('livros-personalizado-grid');
+    if (grid) {
+        grid.innerHTML = '<p style="text-align: center; color: #666; padding: 2rem;">Selecione um formato para ver os livros disponíveis</p>';
+    }
+}
+
+// Função para gerar o grid de livros
+function gerarGridLivrosPersonalizado() {
+    const grid = document.getElementById('livros-personalizado-grid');
+    if (!grid) return;
+    
+    // Usar todos os livros do objeto livrosDisponiveis
+    const livros = Object.keys(livrosDisponiveis).map(id => ({
+        id: id,
+        titulo: livrosDisponiveis[id].nome,
+        imagem: livrosDisponiveis[id].imagem
+    }));
+    
+    grid.innerHTML = livros.map(livro => `
+        <div class="livro-personalizado-card" data-livro="${livro.id}">
+            <img src="${livro.imagem}" alt="${livro.titulo}" loading="lazy">
+            <h4>${livro.titulo}</h4>
+            <div class="preco">R$ ${configuradorPersonalizadoEstado.precos[configuradorPersonalizadoEstado.formato][livro.id].toFixed(2).replace('.', ',')}</div>
+            <div class="checkbox-overlay"></div>
+        </div>
+    `).join('');
+    
+    // Adicionar eventos de clique
+    grid.querySelectorAll('.livro-personalizado-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const livroId = card.dataset.livro;
+            
+            if (configuradorPersonalizadoEstado.livrosSelecionados.has(livroId)) {
+                configuradorPersonalizadoEstado.livrosSelecionados.delete(livroId);
+                card.classList.remove('selected');
+            } else {
+                configuradorPersonalizadoEstado.livrosSelecionados.add(livroId);
+                card.classList.add('selected');
+            }
+            
+            atualizarResumoPersonalizado();
+        });
+    });
+}
+
+// Função para atualizar preços dos livros no grid
+function atualizarPrecosLivros() {
+    const cards = document.querySelectorAll('.livro-personalizado-card');
+    cards.forEach(card => {
+        const livroId = card.dataset.livro;
+        const precoElement = card.querySelector('.preco');
+        const novoPreco = configuradorPersonalizadoEstado.precos[configuradorPersonalizadoEstado.formato][livroId];
+        precoElement.textContent = `R$ ${novoPreco.toFixed(2).replace('.', ',')}`;
+    });
+}
+
+// Função para atualizar o resumo
+function atualizarResumoPersonalizado() {
+    const quantidade = configuradorPersonalizadoEstado.livrosSelecionados.size;
+    const formato = configuradorPersonalizadoEstado.formato;
+    
+    // Atualizar lista de itens
+    const container = document.getElementById('itens-personalizado-selecionados');
+    const nenhumItem = container.querySelector('.nenhum-item-personalizado');
+    
+    if (quantidade === 0) {
+        if (nenhumItem) {
+            nenhumItem.style.display = 'block';
+        }
+        container.querySelectorAll('.item-resumo').forEach(item => item.remove());
+    } else {
+        if (nenhumItem) {
+            nenhumItem.style.display = 'none';
+        }
+        
+        // Limpar itens anteriores
+        container.querySelectorAll('.item-resumo').forEach(item => item.remove());
+        
+        // Adicionar itens selecionados
+        const livrosNomes = {
+            'odu-ifa': 'Odù Ifá',
+            'yoruba-basico': 'Yorùbá Básico',
+            'ewe-oro': 'Ewé Òrò',
+            'ebos-magicos': 'Ebós Mágicos',
+            'oferendas': 'Obi - Oráculo'
+        };
+        
+        configuradorPersonalizadoEstado.livrosSelecionados.forEach(livroId => {
+            const preco = configuradorPersonalizadoEstado.precos[formato][livroId];
+            const itemHtml = `
+                <div class="item-resumo">
+                    <span class="item-nome">${livrosNomes[livroId]}</span>
+                    <span class="item-preco">R$ ${preco.toFixed(2).replace('.', ',')}</span>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', itemHtml);
+        });
+    }
+    
+    // Calcular valores
+    let subtotal = 0;
+    configuradorPersonalizadoEstado.livrosSelecionados.forEach(livroId => {
+        subtotal += configuradorPersonalizadoEstado.precos[formato][livroId];
+    });
+    
+    const desconto = calcularDescontoProgressivo(quantidade);
+    const valorDesconto = subtotal * desconto;
+    const total = subtotal - valorDesconto;
+    
+    // Atualizar valores na interface
+    document.getElementById('quantidade-personalizado').textContent = `${quantidade} ${quantidade === 1 ? 'livro' : 'livros'}`;
+    document.getElementById('subtotal-personalizado').textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+    
+    const linhaDesconto = document.getElementById('desconto-linha-personalizado');
+    if (desconto > 0) {
+        linhaDesconto.style.display = 'flex';
+        document.getElementById('desconto-percentual-personalizado').textContent = `(${Math.round(desconto * 100)}%)`;
+        document.getElementById('desconto-personalizado').textContent = `-R$ ${valorDesconto.toFixed(2).replace('.', ',')}`;
+    } else {
+        linhaDesconto.style.display = 'none';
+    }
+    
+    document.getElementById('total-personalizado').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+    
+    // Habilitar/desabilitar botão - agora inclui validação dos dados do cliente
+    verificarHabilitacaoBotao();
+}
+
+// Função para configurar validação dos campos de cliente
+function configurarValidacaoCliente() {
+    const whatsappInput = document.getElementById('whatsapp-personalizado');
+    const emailInput = document.getElementById('email-personalizado');
+    
+    if (whatsappInput) {
+        // Máscara para WhatsApp
+        whatsappInput.addEventListener('input', function(e) {
+            let valor = e.target.value.replace(/\D/g, '');
+            
+            // Aplicar máscara (11) 99999-9999
+            if (valor.length <= 11) {
+                valor = valor.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+                valor = valor.replace(/^(\d{2})(\d{1,5})$/, '($1) $2');
+                valor = valor.replace(/^(\d{2})$/, '($1');
+            }
+            
+            e.target.value = valor;
+            validarWhatsApp();
+            verificarHabilitacaoBotao();
+        });
+        
+        whatsappInput.addEventListener('blur', validarWhatsApp);
+    }
+    
+    if (emailInput) {
+        emailInput.addEventListener('input', function() {
+            validarEmail();
+            verificarHabilitacaoBotao();
+        });
+        
+        emailInput.addEventListener('blur', validarEmail);
+    }
+}
+
+// Função para validar WhatsApp
+function validarWhatsApp() {
+    const input = document.getElementById('whatsapp-personalizado');
+    const erro = document.getElementById('whatsapp-erro');
+    
+    if (!input || !erro) return false;
+    
+    const valor = input.value.replace(/\D/g, '');
+    
+    if (valor.length === 0) {
+        input.className = '';
+        erro.textContent = '';
+        return false;
+    }
+    
+    if (valor.length === 11 && (valor.startsWith('11') || valor.startsWith('12') || valor.startsWith('13') || valor.startsWith('14') || valor.startsWith('15') || valor.startsWith('16') || valor.startsWith('17') || valor.startsWith('18') || valor.startsWith('19') || valor.startsWith('21') || valor.startsWith('22') || valor.startsWith('24') || valor.startsWith('27') || valor.startsWith('28') || valor.startsWith('31') || valor.startsWith('32') || valor.startsWith('33') || valor.startsWith('34') || valor.startsWith('35') || valor.startsWith('37') || valor.startsWith('38') || valor.startsWith('41') || valor.startsWith('42') || valor.startsWith('43') || valor.startsWith('44') || valor.startsWith('45') || valor.startsWith('46') || valor.startsWith('47') || valor.startsWith('48') || valor.startsWith('49') || valor.startsWith('51') || valor.startsWith('53') || valor.startsWith('54') || valor.startsWith('55') || valor.startsWith('61') || valor.startsWith('62') || valor.startsWith('63') || valor.startsWith('64') || valor.startsWith('65') || valor.startsWith('66') || valor.startsWith('67') || valor.startsWith('68') || valor.startsWith('69') || valor.startsWith('71') || valor.startsWith('73') || valor.startsWith('74') || valor.startsWith('75') || valor.startsWith('77') || valor.startsWith('79') || valor.startsWith('81') || valor.startsWith('82') || valor.startsWith('83') || valor.startsWith('84') || valor.startsWith('85') || valor.startsWith('86') || valor.startsWith('87') || valor.startsWith('88') || valor.startsWith('89') || valor.startsWith('91') || valor.startsWith('92') || valor.startsWith('93') || valor.startsWith('94') || valor.startsWith('95') || valor.startsWith('96') || valor.startsWith('97') || valor.startsWith('98') || valor.startsWith('99'))) {
+        input.className = 'valido';
+        erro.textContent = '';
+        return true;
+    } else {
+        input.className = 'invalido';
+        erro.textContent = 'Digite um WhatsApp válido com DDD';
+        return false;
+    }
+}
+
+// Função para validar Email
+function validarEmail() {
+    const input = document.getElementById('email-personalizado');
+    const erro = document.getElementById('email-erro');
+    
+    if (!input || !erro) return false;
+    
+    const valor = input.value.trim();
+    
+    if (valor.length === 0) {
+        input.className = '';
+        erro.textContent = '';
+        return false;
+    }
+    
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (regexEmail.test(valor)) {
+        input.className = 'valido';
+        erro.textContent = '';
+        return true;
+    } else {
+        input.className = 'invalido';
+        erro.textContent = 'Digite um email válido';
+        return false;
+    }
+}
+
+// Função para verificar se pode habilitar o botão
+function verificarHabilitacaoBotao() {
+    const btnSolicitar = document.getElementById('btn-solicitar-personalizado');
+    if (!btnSolicitar) return;
+    
+    const quantidade = configuradorPersonalizadoEstado.livrosSelecionados.size;
+    const whatsappValido = validarWhatsApp();
+    const emailValido = validarEmail();
+    
+    // Botão habilitado apenas se: tem livros selecionados + WhatsApp válido + Email válido
+    btnSolicitar.disabled = !(quantidade > 0 && whatsappValido && emailValido);
+}
+
+// Função para solicitar combo personalizado (WhatsApp + Email automático)
+function solicitarComboPersonalizadoCompleto() {
+    const quantidade = configuradorPersonalizadoEstado.livrosSelecionados.size;
+    if (quantidade === 0) return;
+    
+    // Obter dados do cliente
+    const whatsappCliente = document.getElementById('whatsapp-personalizado').value;
+    const emailCliente = document.getElementById('email-personalizado').value;
+    
+    // Validar dados antes de prosseguir
+    if (!validarWhatsApp() || !validarEmail()) {
+        mostrarNotificacao('⚠️ Por favor, corrija os dados antes de continuar.', 'warning');
+        return;
+    }
+    
+    const formato = configuradorPersonalizadoEstado.formato;
+    const formatoTexto = formato === 'ebook' ? 'E-books Digitais' : 'Livros Físicos';
+    
+    // Calcular valores
+    let subtotal = 0;
+    configuradorPersonalizadoEstado.livrosSelecionados.forEach(livroId => {
+        subtotal += configuradorPersonalizadoEstado.precos[formato][livroId];
+    });
+    
+    const desconto = calcularDescontoProgressivo(quantidade);
+    const valorDesconto = subtotal * desconto;
+    const total = subtotal - valorDesconto;
+    const percentualDesconto = Math.round(desconto * 100);
+    
+    // Gerar lista de livros usando livrosDisponiveis
+    let listaLivros = '';
+    let listaLivrosEmail = '';
+    configuradorPersonalizadoEstado.livrosSelecionados.forEach(livroId => {
+        const preco = configuradorPersonalizadoEstado.precos[formato][livroId];
+        const nomeLivro = livrosDisponiveis[livroId].nome;
+        listaLivros += `• ${nomeLivro} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
+        listaLivrosEmail += `• ${nomeLivro} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
+    });
+    
+    // 1. ENVIAR PARA WHATSAPP
+    const mensagem = `🌟 *COMBO PERSONALIZADO YORÙBÁ*
+
+� *DADOS DO CLIENTE:*
+📱 WhatsApp: ${whatsappCliente}
+📧 Email: ${emailCliente}
+
+�📖 *Formato:* ${formatoTexto}
+📚 *Quantidade:* ${quantidade} ${quantidade === 1 ? 'livro' : 'livros'}
+
+*📋 LIVROS SELECIONADOS:*
+${listaLivros}
+💰 *Subtotal:* R$ ${subtotal.toFixed(2).replace('.', ',')}
+${desconto > 0 ? `🎯 *Desconto (${percentualDesconto}%):* -R$ ${valorDesconto.toFixed(2).replace('.', ',')}\n` : ''}✨ *TOTAL FINAL:* R$ ${total.toFixed(2).replace('.', ',')}
+
+🙏🏽 Àṣẹ! Gostaria de finalizar este combo personalizado.`;
+
+    const whatsappLink = `https://wa.me/5592991549151?text=${encodeURIComponent(mensagem)}`;
+    window.open(whatsappLink, '_blank');
+    
+    // 2. ENVIAR EMAIL AUTOMÁTICO
+    enviarEmailAutomatico(formatoTexto, quantidade, listaLivrosEmail, subtotal, percentualDesconto, valorDesconto, total, desconto, whatsappCliente, emailCliente);
+}
+
+// Função para envio automático de email usando EmailJS
+function enviarEmailAutomatico(formatoTexto, quantidade, listaLivros, subtotal, percentualDesconto, valorDesconto, total, desconto, whatsappCliente, emailCliente) {
+    // Data e hora atual
+    const agora = new Date();
+    const dataAtual = agora.toLocaleDateString('pt-BR');
+    const horaAtual = agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    
+    // Parâmetros para o template do EmailJS
+    const templateParams = {
+        to_email: 'yoruba.hc.oficial@gmail.com',
+        from_name: `Cliente: ${emailCliente}`,
+        subject: `Solicitação de Combo Personalizado - ${dataAtual}`,
+        whatsapp_cliente: whatsappCliente,
+        email_cliente: emailCliente,
+        data_pedido: dataAtual,
+        hora_pedido: horaAtual,
+        formato_livros: formatoTexto,
+        quantidade_livros: `${quantidade} ${quantidade === 1 ? 'livro' : 'livros'}`,
+        lista_livros: listaLivros,
+        subtotal: `R$ ${subtotal.toFixed(2).replace('.', ',')}`,
+        desconto_percentual: percentualDesconto > 0 ? `${percentualDesconto}%` : 'Sem desconto',
+        valor_desconto: desconto > 0 ? `R$ ${valorDesconto.toFixed(2).replace('.', ',')}` : 'R$ 0,00',
+        total_final: `R$ ${total.toFixed(2).replace('.', ',')}`,
+        mensagem_cliente: 'Olá! Gostaria de finalizar este combo personalizado. Por favor, enviem as instruções de pagamento e entrega. Aguardo retorno!'
+    };
+    
+    // Verificar se EmailJS está configurado e disponível
+    if (typeof emailjs !== 'undefined' && typeof EMAIL_CONFIG !== 'undefined' && EMAIL_CONFIG.USER_ID !== 'YOUR_USER_ID') {
+        // Enviar email usando as configurações
+        emailjs.send(EMAIL_CONFIG.SERVICE_ID, EMAIL_CONFIG.TEMPLATE_ID, templateParams)
+            .then(function(response) {
+                console.log('Email enviado com sucesso!', response.status, response.text);
+                mostrarNotificacao('✅ Solicitação enviada com sucesso para WhatsApp e Email!', 'success');
+            }, function(error) {
+                console.error('Erro ao enviar email:', error);
+                mostrarNotificacao('✅ WhatsApp enviado! ⚠️ Email automático com problema.', 'warning');
+            });
+    } else {
+        console.warn('EmailJS não está configurado. Apenas WhatsApp foi enviado.');
+        mostrarNotificacao('✅ WhatsApp enviado! ⚠️ Configure EmailJS para envio automático.', 'warning');
+    }
+}
+
+// Função para mostrar notificações (opcional)
+function mostrarNotificacao(mensagem, tipo = 'info') {
+    // Criar elemento de notificação
+    const notificacao = document.createElement('div');
+    notificacao.className = `notificacao notificacao-${tipo}`;
+    notificacao.textContent = mensagem;
+    notificacao.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${tipo === 'success' ? '#10b981' : tipo === 'error' ? '#ef4444' : '#f59e0b'};
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 10000;
+        font-weight: 600;
+        max-width: 300px;
+        animation: slideIn 0.3s ease;
+    `;
+    
+    // Adicionar CSS da animação se não existir
+    if (!document.querySelector('#notificacao-styles')) {
+        const style = document.createElement('style');
+        style.id = 'notificacao-styles';
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    document.body.appendChild(notificacao);
+    
+    // Remover após 5 segundos
+    setTimeout(() => {
+        notificacao.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+            if (notificacao.parentNode) {
+                notificacao.parentNode.removeChild(notificacao);
+            }
+        }, 300);
+    }, 5000);
+}
+
+// Inicializar quando o documento carregar
+document.addEventListener('DOMContentLoaded', function() {
+    // Aguardar um pouco para garantir que todos os elementos estejam prontos
+    setTimeout(() => {
+        if (document.getElementById('modal-combo-personalizado')) {
+            inicializarConfiguradorPersonalizado();
+        }
+    }, 100);
 });
