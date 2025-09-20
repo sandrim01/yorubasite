@@ -193,6 +193,33 @@ const produtos = {
         linkEbook: "https://pay.hotmart.com/E101920830J",
         linkFisico: "https://pay.hotmart.com/X101921002I"
     },
+    "oruko-nomes": {
+        titulo: "Òrùkọ – Os Nomes dos Filhos de Òrìṣà",
+        preco: "R$ 29,99",
+        precoEbook: "R$ 29,99",
+        precoEbookOriginal: "R$ 39,99",
+        precoFisico: "R$ 79,99",
+        precoFisicoOriginal: "R$ 89,99",
+        imagem: "oruko.jpg",
+        badges: ["Novo"],
+        descricao: "Nesta obra inédita, Bàbá Akindele revela a profundidade espiritual dos nomes na tradição yorùbá e no Candomblé. Mais do que simples identificações, os Òrùkọ são bênçãos, orações e guias de destino. Cada nome carrega a memória ancestral, a ligação com os Òrìṣà e a força do Àṣẹ que molda a vida do iniciado. O livro apresenta nomes sagrados ligados a cada divindade, seus significados e o papel que exercem na vida dos filhos de santo, resgatando e preservando uma tradição que atravessa séculos.",
+        destaques: [
+            "Explicação completa sobre o significado espiritual dos nomes (Òrùkọ)",
+            "Nomes tradicionais ligados a cada Òrìṣà, com tradução e interpretação",
+            "Reflexões sobre a importância do Òrùkọ no Candomblé e na cultura yorùbá",
+            "Preservação da memória ancestral e da identidade religiosa"
+        ],
+        dados: {
+            "Autor": "Bàbá Akindele",
+            "Editora": "Yorùbá History Channel",
+            "Ano": "2025",
+            "Formato": "Digital (PDF) e Impresso",
+            "Páginas": "136"
+        },
+        linkCompra: "https://pay.hotmart.com/U101992074R",
+        linkEbook: "https://pay.hotmart.com/U101992074R",
+        linkFisico: "https://pay.hotmart.com/V101992053C"
+    },
     "combo-sagrado": {
         titulo: "Combo Sagrado",
         preco: "R$ 89,99",
@@ -756,6 +783,12 @@ const livrosDisponiveis = {
         imagem: "ounje.jpg",
         precoEbook: 59.99,
         precoFisico: 109.99
+    },
+    "oruko-nomes": {
+        nome: "Òrùkọ – Os Nomes dos Filhos de Òrìṣà",
+        imagem: "oruko.jpg",
+        precoEbook: 39.99,
+        precoFisico: 89.99
     }
 };
 
@@ -765,17 +798,19 @@ let livrosSelecionados = [];
 
 // Função para calcular desconto progressivo
 function calcularDescontoProgressivo(quantidadeLivros) {
-    if (quantidadeLivros >= 6) return 0.20; // 20% para 6-7 livros
-    if (quantidadeLivros >= 3) return 0.15; // 15% para 3-5 livros
-    if (quantidadeLivros >= 2) return 0.10; // 10% para 2 livros
+    if (quantidadeLivros >= 10) return 0.20; // 20% para 10+ livros
+    if (quantidadeLivros >= 6) return 0.15; // 15% para 6-9 livros
+    if (quantidadeLivros >= 3) return 0.10; // 10% para 3-5 livros
+    if (quantidadeLivros >= 2) return 0.05; // 5% para 2 livros
     return 0; // Sem desconto para 1 livro
 }
 
 // Função para obter texto do desconto
 function obterTextoDesconto(quantidadeLivros) {
-    if (quantidadeLivros >= 6) return "20%";
-    if (quantidadeLivros >= 3) return "15%";
-    if (quantidadeLivros >= 2) return "10%";
+    if (quantidadeLivros >= 10) return "20%";
+    if (quantidadeLivros >= 6) return "15%";
+    if (quantidadeLivros >= 3) return "10%";
+    if (quantidadeLivros >= 2) return "5%";
     return "0%";
 }
 
@@ -1075,7 +1110,8 @@ let configuradorPersonalizadoEstado = {
             'ilu': 34.99,
             'odu': 44.99,
             'ebos': 79.99,
-            'ounje': 59.99
+            'ounje': 59.99,
+            'oruko-nomes': 39.99
         },
         fisico: {
             'yoruba': 99.99,
@@ -1084,7 +1120,8 @@ let configuradorPersonalizadoEstado = {
             'ilu': 74.99,
             'odu': 94.99,
             'ebos': 129.99,
-            'ounje': 109.99
+            'ounje': 109.99,
+            'oruko-nomes': 89.99
         }
     }
 };
