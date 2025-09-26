@@ -1882,7 +1882,7 @@ p.autor-desc,
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }

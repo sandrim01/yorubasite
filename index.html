@@ -49,44 +49,60 @@
         </div>
     </header>
 
-    <!-- Hero Section Dinâmico -->
-    <section class="hero-dinamico">
-        <div class="hero-background"></div>
+    <!-- Navigation Buttons -->
+    <nav class="main-navigation">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="titulo-principal">Biblioteca Yorùbá</span>
+            <div class="nav-buttons">
+                <a href="#livros" class="nav-btn">📖 Livros Individuais</a>
+                <a href="#combos" class="nav-btn">📚 Combos Especiais</a>
+                <a href="#combopersonalizado" class="nav-btn">🎁 Combo Personalizado</a>
+                <a href="https://open.spotify.com/show/4i7k2WGgFc6Gn8CDpoPYgg?si=ZeF0fGIMQpGgbA7dz69Txg" target="_blank" rel="noopener noreferrer" class="nav-btn podcast-btn">🎧 Ouvir Podcast</a>
+               
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal de Boas-Vindas -->
+    <div id="welcome-modal" class="welcome-modal">
+        <div class="welcome-modal-content">
+            <div class="welcome-header">
+                <button class="welcome-close" onclick="fecharModalBemVindo()">&times;</button>
+                <h1 class="welcome-title">
+                    <span class="titulo-principal">🏛️ Biblioteca Yorùbá</span>
                 </h1>
-                <p class="hero-subtitle">Explore nossa coleção completa de livros e combos especiais</p>
-                
-                
-                
-                <div class="hero-nav">
-                    <a href="#livros" class="hero-btn">📖 Livros</a>
-                    <a href="#combos" class="hero-btn">📚 Combos</a>
-                    <a href="#combopersonalizado" class="hero-btn">🎁 Combo Personalizado</a>
+                <p class="welcome-subtitle">Explore nossa coleção completa de livros e combos especiais</p>
+            </div>
+            
+            <div class="welcome-body">
+                <div class="welcome-stats">
+                    <div class="welcome-stat">
+                        <span class="welcome-stat-number">9</span>
+                        <span class="welcome-stat-label">Livros</span>
+                    </div>
+                    <div class="welcome-stat">
+                        <span class="welcome-stat-number">5</span>
+                        <span class="welcome-stat-label">Combos</span>
+                    </div>
+                    <div class="welcome-stat">
+                        <span class="welcome-stat-number">120k+</span>
+                        <span class="welcome-stat-label">Seguidores</span>
+                    </div>
+                    <div class="welcome-stat">
+                        <span class="welcome-stat-number">5⭐</span>
+                        <span class="welcome-stat-label">Avaliação</span>
+                    </div>
                 </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">8</span>
-                        <span class="hero-stat-label">Livros</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">5</span>
-                        <span class="hero-stat-label">Combos</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">100k+</span>
-                        <span class="hero-stat-label">Seguidores</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">5⭐</span>
-                        <span class="hero-stat-label">Avaliação</span>
-                    </div>
+                
+                <div class="welcome-navigation">
+                    <h3>Navegue pela nossa biblioteca:</h3>
+                    <a href="#livros" class="welcome-btn" onclick="fecharModalBemVindo()">📖 Ver Livros</a>
+                    <a href="#combos" class="welcome-btn" onclick="fecharModalBemVindo()">📚 Ver Combos</a>
+                    <a href="#combopersonalizado" class="welcome-btn" onclick="fecharModalBemVindo()">🎁 Criar Combo Personalizado</a>
+                    <a href="https://open.spotify.com/show/4i7k2WGgFc6Gn8CDpoPYgg?si=ZeF0fGIMQpGgbA7dz69Txg" target="_blank" rel="noopener noreferrer" class="welcome-btn podcast-welcome-btn">🎧 Ouvir Nosso Podcast</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Livros Section -->
     <section class="produtos" id="livros">
@@ -113,12 +129,40 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 79,99</span>
                                 <span class="preco-valor">R$ 69,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Livro 2: Èwé Òró I -->
+                <!-- Livro 2: Coletânea Ritos e Mistérios - Livro I -->
+                <div class="produto-card" data-produto="coletanea-orisa">
+                    <div class="produto-image">
+                        <img src="orisa.jpg" alt="Coletânea Ritos e Mistérios - Livro I - Aprendendo sobre os Òrìṣà" loading="lazy">
+                        <div class="produto-overlay">
+                            <button class="btn-ver-detalhes">Comprar</button>
+                        </div>
+                        <div class="produto-badge novo">Novo</div>
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Aprendendo sobre os Òrìṣà</h3>
+                        <div class="produto-precos">
+                            <div class="preco-opcao">
+                                <span class="preco-label">E-book</span>
+                                <span class="preco-original">R$ 44,99</span>
+                                <span class="preco-valor">R$ 34,99</span>
+                            </div>
+                            <div class="preco-opcao">
+                                <span class="preco-label">Livro físico</span>
+                                <span class="preco-original">R$ 109,99</span>
+                                <span class="preco-valor">R$ 99,99</span>
+                                <span class="frete-info">+frete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Livro 3: Èwé Òró I -->
                 <div class="produto-card" data-produto="ewe">
                     <div class="produto-image">
                         <img src="livro_eweoro.png" alt="Èwé Òró I" loading="lazy">
@@ -138,12 +182,13 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 79,99</span>
                                 <span class="preco-valor">R$ 69,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Livro 3: Ilú Odára -->
+                <!-- Livro 4: Ilú Odára -->
                 <div class="produto-card" data-produto="ilu">
                     <div class="produto-image">
                         <img src="ilu odara folha.png" alt="Ilú Odára" loading="lazy">
@@ -163,12 +208,13 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 74,99</span>
                                 <span class="preco-valor">R$ 64,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Livro 4: O livro dos Èbós -->
+                <!-- Livro 5: O livro dos Èbós -->
                 <div class="produto-card" data-produto="livro-ebos">
                     <div class="produto-image">
                         <img src="livro_ebos.jpg" alt="O livro dos Èbós - Fundamentos e Práticas Sagradas" loading="lazy">
@@ -188,12 +234,13 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 129,99</span>
                                 <span class="preco-valor">R$ 119,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Livro 5: Odù no Èrìndílógún -->
+                <!-- Livro 6: Odù no Èrìndílógún -->
                 <div class="produto-card" data-produto="odu">
                     <div class="produto-image">
                         <img src="livro_odus.jpg" alt="Odù no ÈÈrìndílógún" loading="lazy">
@@ -213,12 +260,13 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 94,99</span>
                                 <span class="preco-valor">R$ 84,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Livro 6: Òunjẹ́ Àṣẹ - Comidas Sagradas dos Òrìṣà -->
+                                <!-- Livro 7: Òunjẽ́ Àṣẽ - Comidas Sagradas dos Òrìṣà -->
                 <div class="produto-card" data-produto="ounje">
                     <div class="produto-image">
                         <img src="ounje.jpg" alt="Òunjẹ́ Àṣẹ - Comidas Sagradas dos Òrìṣà" loading="lazy">
@@ -238,12 +286,13 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 109,99</span>
                                 <span class="preco-valor">R$ 99,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Livro 7: Òrùkọ – Os Nomes dos Filhos de Òrìṣà -->
+                <!-- Livro 8: Òrùkọ – Os Nomes dos Filhos de Òrìṣà -->
                 <div class="produto-card" data-produto="oruko-nomes">
                     <div class="produto-image">
                         <img src="oruko.jpg" alt="Òrùkọ – Os Nomes dos Filhos de Òrìṣà" loading="lazy">
@@ -264,12 +313,13 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 89,99</span>
                                 <span class="preco-valor">R$ 79,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Livro 8: Yorùbá Descomplicado -->
+                <!-- Livro 9: Yorùbá Descomplicado -->
                 <div class="produto-card" data-produto="yoruba">
                     <div class="produto-image">
                         <img src="livro_yoruba.png" alt="Yorùbá Descomplicado" loading="lazy">
@@ -289,6 +339,7 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 99,99</span>
                                 <span class="preco-valor">R$ 89,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
@@ -322,6 +373,7 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 429,95</span>
                                 <span class="preco-valor">R$ 349,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
@@ -347,6 +399,7 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 154,98</span>
                                 <span class="preco-valor">R$ 129,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
@@ -372,6 +425,7 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 229,97</span>
                                 <span class="preco-valor">R$ 199,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
@@ -397,6 +451,7 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 679,93</span>
                                 <span class="preco-valor">R$ 549,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
@@ -422,6 +477,7 @@
                                 <span class="preco-label">Livro físico</span>
                                 <span class="preco-original">R$ 239,98</span>
                                 <span class="preco-valor">R$ 199,99</span>
+                                <span class="frete-info">+frete</span>
                             </div>
                         </div>
                     </div>
@@ -482,6 +538,7 @@
                                     <div class="preco-modal-container">
                                         <span class="preco-modal-original" id="preco-fisico-original">R$ 79,99</span>
                                         <span class="preco-modal-valor" id="preco-fisico">R$ 69,99</span>
+                                        <span class="frete-info-modal">+frete</span>
                                     </div>
                                     <a id="modal-btn-fisico" href="#" class="btn-comprar btn-fisico" aria-label="Comprar livro físico">
                                         <i class="fas fa-book"></i>
@@ -843,6 +900,52 @@
         </div>
     </section>
 
+    <!-- Podcast Section -->
+    <section class="podcast-section sobre-conteudo">
+        <div class="container">
+            <h2 class="section-title">🎧 Nosso Podcast no Spotify</h2>
+            <div class="garantia-card podcast-card">
+                <div class="garantia-icon podcast-icon">
+                    <i class="fab fa-spotify"></i>
+                </div>
+                <div class="garantia-content podcast-content">
+                    <p>Acompanhe nossos episódios exclusivos sobre cultura yorùbá, histórias ancestrais e ensinamentos espirituais!</p>
+                    <div class="podcast-layout">
+                        <div class="podcast-features">
+                            <div class="podcast-feature">
+                                <i class="fas fa-microphone"></i>
+                                <span>Episódios Semanais</span>
+                            </div>
+                            <div class="podcast-feature">
+                                <i class="fas fa-book-open"></i>
+                                <span>Ensinamentos Ancestrais</span>
+                            </div>
+                        </div>
+                        <div class="podcast-actions">
+                            <a href="https://open.spotify.com/show/4i7k2WGgFc6Gn8CDpoPYgg?si=ZeF0fGIMQpGgbA7dz69Txg" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="podcast-btn-main">
+                                <i class="fab fa-spotify"></i>
+                                Ouvir no Spotify
+                            </a>
+                        </div>
+                    </div>
+                    <div class="podcast-stats">
+                        <div class="podcast-stat">
+                            <i class="fas fa-headphones"></i>
+                            <span>1k+ ouvintes</span>
+                        </div>
+                        <div class="podcast-stat">
+                            <i class="fas fa-star"></i>
+                            <span>5 ⭐ avaliação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Garantia -->
     <section class="garantia">
         <div class="container">
@@ -922,9 +1025,9 @@
                 <div class="footer-section">
                     <p class="footer-text">© 2025 Yorùbá History Channel. Todos os direitos reservados.</p>
                     <div class="footer-links">
-                        <a href="paginaextra.html" class="footer-link">Página Extra</a>
                         <a href="#" class="footer-link">Termos de Uso</a>
                         <a href="#" class="footer-link">Privacidade</a>
+                        <a href="#" class="footer-link">Suporte</a>
                     </div>
                 </div>
             </div>
@@ -970,5 +1073,56 @@
     <!-- EmailJS para envio automático de emails -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript" src="emailjs-config.js"></script>
+    
+    <!-- Script do Modal de Boas-Vindas -->
+    <script>
+        // Controle do Modal de Boas-Vindas
+        function abrirModalBemVindo() {
+            const modal = document.getElementById('welcome-modal');
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        function fecharModalBemVindo() {
+            const modal = document.getElementById('welcome-modal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        // Abrir modal automaticamente ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se é a primeira visita (usando localStorage)
+            const jaVisitou = localStorage.getItem('yoruba-welcome-shown');
+            
+            if (!jaVisitou) {
+                setTimeout(() => {
+                    abrirModalBemVindo();
+                    localStorage.setItem('yoruba-welcome-shown', 'true');
+                }, 1000); // Abre após 1 segundo
+            }
+        });
+        
+        // Fechar modal clicando fora dele
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('welcome-modal');
+            if (e.target === modal) {
+                fecharModalBemVindo();
+            }
+        });
+        
+        // Fechar modal com tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                fecharModalBemVindo();
+            }
+        });
+    </script>
 </body>
 </html>
+
+
+

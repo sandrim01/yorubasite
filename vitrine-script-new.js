@@ -220,6 +220,34 @@ const produtos = {
         linkEbook: "https://pay.hotmart.com/U101992074R",
         linkFisico: "https://pay.hotmart.com/V101992053C"
     },
+    "coletanea-orisa": {
+        titulo: "Aprendendo sobre os Òrìṣà",
+        subtitulo: "Coletânea Ritos e Mistérios - Livro I",
+        preco: "R$ 34,99",
+        precoEbook: "R$ 34,99",
+        precoEbookOriginal: "R$ 44,99",
+        precoFisico: "R$ 99,99",
+        precoFisicoOriginal: "R$ 109,99",
+        imagem: "orisa.jpg",
+        badges: ["Novo"],
+        descricao: "Nesta obra fundamental, Bàbá Akindele conduz o leitor a uma jornada pelo universo dos Òrìṣà, revelando de forma clara e acessível os fundamentos, ritos e histórias que sustentam o Candomblé. Mais do que um livro, trata-se de um guia espiritual e cultural que conecta tradição, ancestralidade e resistência. O autor apresenta desde os princípios da religião, a cosmologia yorùbá e os Irúnmòlè, até os mitos da criação, a essência do Òrìṣà e a riqueza do panteão africano.",
+        destaques: [
+            "Fundamentos do Candomblé e da cosmologia yorùbá",
+            "O papel dos Irúnmòlè e os mitos da criação",
+            "Apresentação dos principais Òrìṣà e suas características",
+            "Reflexões sobre ancestralidade, oralidade e iniciação"
+        ],
+        dados: {
+            "Autor": "Bàbá Akindele",
+            "Editora": "Yorùbá History Channel",
+            "Ano": "2025",
+            "Formato": "Digital (PDF) e Físico",
+            "Páginas": "150"
+        },
+        linkCompra: "https://pay.hotmart.com/N102104557D",
+        linkEbook: "https://pay.hotmart.com/N102104557D",
+        linkFisico: "https://pay.hotmart.com/D102104527M"
+    },
     "combo-sagrado": {
         titulo: "Combo Sagrado",
         preco: "R$ 89,99",
@@ -414,19 +442,13 @@ function abrirModal(produtoId) {
         return;
     }
 
-    // Dividir título em título e subtítulo
-    const tituloCompleto = produto.titulo;
-    const partesDoTitulo = tituloCompleto.split(' - ');
-    const titulo = partesDoTitulo[0];
-    const subtitulo = partesDoTitulo.length > 1 ? partesDoTitulo[1] : '';
-
     // Preencher dados do modal
     modalImg.src = produto.imagem;
     modalImg.alt = produto.titulo;
-    modalTitulo.textContent = titulo;
+    modalTitulo.textContent = produto.titulo;
     if (modalSubtitulo) {
-        modalSubtitulo.textContent = subtitulo;
-        modalSubtitulo.style.display = subtitulo ? 'block' : 'none';
+        modalSubtitulo.textContent = produto.subtitulo || '';
+        modalSubtitulo.style.display = produto.subtitulo ? 'block' : 'none';
     }
     if (modalDescricao) modalDescricao.textContent = produto.descricao;
     
@@ -528,6 +550,17 @@ function abrirModal(produtoId) {
                     </div>
                 </div>
             `;
+        }
+    }
+
+    // Controlar visibilidade do +frete no modal
+    const freteInfoModal = document.querySelector('.frete-info-modal');
+    if (freteInfoModal) {
+        // Mostrar +frete apenas se houver preço físico diferente do e-book
+        if (produto.precoFisico && produto.precoFisico !== produto.precoEbook) {
+            freteInfoModal.style.display = 'block';
+        } else {
+            freteInfoModal.style.display = 'none';
         }
     }
 
@@ -754,6 +787,12 @@ const livrosDisponiveis = {
         precoEbook: 39.99,
         precoFisico: 79.99
     },
+    "coletanea-orisa": {
+        nome: "Coletânea Ritos e Mistérios - Livro I",
+        imagem: "orisa.jpg",
+        precoEbook: 44.99,
+        precoFisico: 109.99
+    },
     ewe: {
         nome: "Èwé Òró I",
         imagem: "livro_eweoro.png",
@@ -883,6 +922,10 @@ function atualizarGridLivros() {
     livrosGrid.innerHTML = '';
     
     Object.entries(livrosDisponiveis).forEach(([id, livro]) => {
+        if (!livro) {
+            console.error('Livro não encontrado na geração:', id);
+            return;
+        }
         const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
         
         const livroDiv = document.createElement('div');
@@ -953,12 +996,18 @@ function atualizarResumo() {
     let subtotal = 0;
     const itensHtml = livrosSelecionados.map(livroId => {
         const livro = livrosDisponiveis[livroId];
+        if (!livro) {
+            console.error('ERRO: Livro não encontrado para ID:', livroId);
+            console.log('IDs disponíveis:', Object.keys(livrosDisponiveis));
+            return '<div class="item-selecionado"><span class="item-nome">Livro não encontrado</span><span class="item-preco">R$ 0,00</span></div>';
+        }
+        
         const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
         subtotal += preco;
         
         return `
             <div class="item-selecionado">
-                <span class="item-nome">${livro.nome}</span>
+                <span class="item-nome">${livro.nome || 'Nome não definido'}</span>
                 <span class="item-preco">R$ ${preco.toFixed(2).replace('.', ',')}</span>
             </div>
         `;
@@ -1006,9 +1055,13 @@ function enviarPedidoWhatsApp(subtotal, desconto, total, percentualDesconto) {
     const tipoLivro = formatoSelecionado === 'ebook' ? 'E-books Digitais' : 'Livros Físicos';
     const livrosTexto = livrosSelecionados.map(livroId => {
         const livro = livrosDisponiveis[livroId];
+        if (!livro) {
+            console.error('Livro não encontrado para WhatsApp:', livroId);
+            return '';
+        }
         const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
         return `📖 ${livro.nome} - R$ ${preco.toFixed(2).replace('.', ',')}`;
-    }).join('\n');
+    }).filter(item => item !== '').join('\n');
     
     const dataAtual = new Date().toLocaleDateString('pt-BR');
     const horaAtual = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
@@ -1052,9 +1105,13 @@ function enviarPedidoEmail(subtotal, desconto, total, percentualDesconto) {
     const tipoLivro = formatoSelecionado === 'ebook' ? 'E-books Digitais' : 'Livros Físicos';
     const livrosTexto = livrosSelecionados.map(livroId => {
         const livro = livrosDisponiveis[livroId];
+        if (!livro) {
+            console.error('Livro não encontrado para Email:', livroId);
+            return '';
+        }
         const preco = formatoSelecionado === 'ebook' ? livro.precoEbook : livro.precoFisico;
         return `• ${livro.nome} - R$ ${preco.toFixed(2).replace('.', ',')}`;
-    }).join('\n');
+    }).filter(item => item !== '').join('\n');
     
     const dataAtual = new Date().toLocaleDateString('pt-BR');
     const horaAtual = new Date().toLocaleTimeString('pt-BR');
@@ -1106,6 +1163,7 @@ let configuradorPersonalizadoEstado = {
         ebook: {
             'yoruba': 49.99,
             'obi': 39.99,
+            'coletanea-orisa': 44.99,
             'ewe': 39.99,
             'ilu': 34.99,
             'odu': 44.99,
@@ -1116,6 +1174,7 @@ let configuradorPersonalizadoEstado = {
         fisico: {
             'yoruba': 99.99,
             'obi': 79.99,
+            'coletanea-orisa': 109.99,
             'ewe': 79.99,
             'ilu': 74.99,
             'odu': 94.99,
@@ -1299,19 +1358,14 @@ function atualizarResumoPersonalizado() {
         container.querySelectorAll('.item-resumo').forEach(item => item.remove());
         
         // Adicionar itens selecionados
-        const livrosNomes = {
-            'odu-ifa': 'Odù Ifá',
-            'yoruba-basico': 'Yorùbá Básico',
-            'ewe-oro': 'Ewé Òrò',
-            'ebos-magicos': 'Ebós Mágicos',
-            'oferendas': 'Obi - Oráculo'
-        };
-        
         configuradorPersonalizadoEstado.livrosSelecionados.forEach(livroId => {
             const preco = configuradorPersonalizadoEstado.precos[formato][livroId];
+            const livro = livrosDisponiveis[livroId];
+            const nomeLivro = livro ? livro.nome : 'Livro não encontrado';
+            
             const itemHtml = `
                 <div class="item-resumo">
-                    <span class="item-nome">${livrosNomes[livroId]}</span>
+                    <span class="item-nome">${nomeLivro}</span>
                     <span class="item-preco">R$ ${preco.toFixed(2).replace('.', ',')}</span>
                 </div>
             `;
@@ -1484,7 +1538,8 @@ function solicitarComboPersonalizadoCompleto() {
     let listaLivrosEmail = '';
     configuradorPersonalizadoEstado.livrosSelecionados.forEach(livroId => {
         const preco = configuradorPersonalizadoEstado.precos[formato][livroId];
-        const nomeLivro = livrosDisponiveis[livroId].nome;
+        const livro = livrosDisponiveis[livroId];
+        const nomeLivro = livro ? livro.nome : 'Livro não encontrado';
         listaLivros += `• ${nomeLivro} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
         listaLivrosEmail += `• ${nomeLivro} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
     });
