@@ -13,9 +13,9 @@ const produtos = {
         titulo: "Yorùbá Descomplicado - Uso em Rituais Sagrados do Candomblé",
         preco: "R$ 39,99",
         precoEbook: "R$ 39,99",
-        precoEbookOriginal: "R$ 49,99",
+        precoEbookOriginal: "R$ 64,99",
         precoFisico: "R$ 89,99",
-        precoFisicoOriginal: "R$ 99,99",
+        precoFisicoOriginal: "R$ 114,99",
         imagem: "livro_yoruba.png",
         badges: [],
         descricao: "Mais do que um dicionário, este é um guia funcional e ritualístico da língua yorùbá. O livro ensina vocabulário, estrutura de frases, pronúncia, termos rituais e saudações utilizadas nos terreiros. Material indispensável para iniciados, praticantes e estudiosos da cultura afro-brasileira que desejam se comunicar com respeito, reverência e precisão nos contextos sagrados.",
@@ -39,9 +39,9 @@ const produtos = {
         titulo: "Aprendendo a Jogar Obì - O Oráculo Sagrado dos Òrìsà",
         preco: "R$ 29,99",
         precoEbook: "R$ 29,99",
-        precoEbookOriginal: "R$ 39,99",
+        precoEbookOriginal: "R$ 54,99",
         precoFisico: "R$ 69,99",
-        precoFisicoOriginal: "R$ 79,99",
+        precoFisicoOriginal: "R$ 94,99",
         imagem: "livro_obi.png",
         badges: [],
         descricao: "Neste guia essencial, Bàbá Akindele ensina de forma prática como jogar, interpretar e cuidar do Obì – um dos oráculos mais antigos e respeitados no culto aos Òrìsà. O livro apresenta as formas de jogo, tipos de Obì, invocações, oríkì, interpretações e cuidados rituais.",
@@ -65,9 +65,9 @@ const produtos = {
         titulo: "Èwé Òró - Folhas de Fundamento I",
         preco: "R$ 29,99",
         precoEbook: "R$ 29,99",
-        precoEbookOriginal: "R$ 39,99",
+        precoEbookOriginal: "R$ 54,99",
         precoFisico: "R$ 69,99",
-        precoFisicoOriginal: "R$ 79,99",
+        precoFisicoOriginal: "R$ 94,99",
         imagem: "livro_eweoro.png",
         badges: [],
         descricao: "Este livro é um verdadeiro herbário espiritual que apresenta o nome sagrado de dezenas de folhas utilizadas nos rituais afro-brasileiros. Cada entrada traz o nome em yorùbá com acentuação tonal correta, nome popular, nome científico, Òrìṣà correspondente, usos medicinais, aplicações ritualísticas e imagens ilustrativas. Obra essencial para iniciados, sacerdotes e estudiosos que desejam aprofundar sua relação com o universo vegetal sagrado.",
@@ -91,9 +91,9 @@ const produtos = {
         titulo: "Ilú Odára - Ritmo, Tradição e Fé",
         preco: "R$ 24,99",
         precoEbook: "R$ 24,99",
-        precoEbookOriginal: "R$ 34,99",
+        precoEbookOriginal: "R$ 49,99",
         precoFisico: "R$ 64,99",
-        precoFisicoOriginal: "R$ 74,99",
+        precoFisicoOriginal: "R$ 89,99",
         imagem: "ilu odara folha.png",
         badges: [],
         descricao: "Um mergulho no universo dos tambores sagrados do Candomblé e da Umbanda. O livro revela a história, os tipos de atabaques, a missão dos ogãs e a linguagem ritual dos toques que invocam os Òrìṣà.",
@@ -117,9 +117,9 @@ const produtos = {
         titulo: "Odù no Ẹ́ẹ́rìndínlógún - Caminhos, Conselhos e Mistérios",
         preco: "R$ 34,99",
         precoEbook: "R$ 34,99",
-        precoEbookOriginal: "R$ 44,99",
+        precoEbookOriginal: "R$ 59,99",
         precoFisico: "R$ 84,99",
-        precoFisicoOriginal: "R$ 94,99",
+        precoFisicoOriginal: "R$ 109,99",
         imagem: "livro_odus.jpg",
         badges: [],
         descricao: "Este livro apresenta um estudo completo sobre os 16 Òdù maiores do oráculo dos búzios, conhecido como Ẹ́ẹ́rìndínlógún. Bàbá Akindele revela os fundamentos, funções e simbolismos de cada Odù, conectando histórias ancestrais com o uso ritual e prático. Obra indispensável para quem deseja compreender profundamente o jogo de búzios.",
@@ -143,9 +143,9 @@ const produtos = {
         titulo: "O livro dos Èbós - Fundamentos e Práticas Sagradas",
         preco: "R$ 69,99",
         precoEbook: "R$ 69,99",
-        precoEbookOriginal: "R$ 79,99",
+        precoEbookOriginal: "R$ 94,99",
         precoFisico: "R$ 119,99",
-        precoFisicoOriginal: "R$ 129,99",
+        precoFisicoOriginal: "R$ 144,99",
         imagem: "livro_ebos.jpg",
         badges: [],
         descricao: "Este livro apresenta um mergulho profundo na tradição dos ebós, rituais sagrados de limpeza, proteção e transformação dentro do culto aos Òrìṣà. Bàbá Akindele reúne fundamentos, ingredientes, receitas e aplicações práticas, mostrando como cada ebó atua na abertura de caminhos, na cura espiritual e no fortalecimento do axé. Uma obra indispensável para iniciados, estudiosos e todos que buscam compreender a importância e o poder dos ebós na tradição yorùbá e no Candomblé.",
@@ -170,9 +170,9 @@ const produtos = {
         titulo: "Òunjẹ́ Àṣẹ - Comidas Sagradas dos Òrìṣà",
         preco: "R$ 49,99",
         precoEbook: "R$ 49,99",
-        precoEbookOriginal: "R$ 59,99",
+        precoEbookOriginal: "R$ 74,99",
         precoFisico: "R$ 99,99",
-        precoFisicoOriginal: "R$ 109,99",
+        precoFisicoOriginal: "R$ 124,99",
         imagem: "ounje.jpg",
         badges: [],
         descricao: "Neste livro fundamental, Bàbá Akindele apresenta a riqueza da culinária sagrada do Candomblé e da tradição yorùbá, revelando como cada prato é mais do que alimento: é oferenda, oração e caminho de ligação com o divino. A obra descreve receitas tradicionais, seus significados espirituais e rituais, além do papel essencial da Yabassê como guardiã dos segredos da cozinha sagrada.",
@@ -197,9 +197,9 @@ const produtos = {
         titulo: "Òrùkọ – Os Nomes dos Filhos de Òrìṣà",
         preco: "R$ 29,99",
         precoEbook: "R$ 29,99",
-        precoEbookOriginal: "R$ 39,99",
+        precoEbookOriginal: "R$ 54,99",
         precoFisico: "R$ 79,99",
-        precoFisicoOriginal: "R$ 89,99",
+        precoFisicoOriginal: "R$ 104,99",
         imagem: "oruko.jpg",
         badges: ["Novo"],
         descricao: "Nesta obra inédita, Bàbá Akindele revela a profundidade espiritual dos nomes na tradição yorùbá e no Candomblé. Mais do que simples identificações, os Òrùkọ são bênçãos, orações e guias de destino. Cada nome carrega a memória ancestral, a ligação com os Òrìṣà e a força do Àṣẹ que molda a vida do iniciado. O livro apresenta nomes sagrados ligados a cada divindade, seus significados e o papel que exercem na vida dos filhos de santo, resgatando e preservando uma tradição que atravessa séculos.",
@@ -225,9 +225,9 @@ const produtos = {
         subtitulo: "Coletânea Ritos e Mistérios - Livro I",
         preco: "R$ 34,99",
         precoEbook: "R$ 34,99",
-        precoEbookOriginal: "R$ 44,99",
+        precoEbookOriginal: "R$ 59,99",
         precoFisico: "R$ 99,99",
-        precoFisicoOriginal: "R$ 109,99",
+        precoFisicoOriginal: "R$ 124,99",
         imagem: "orisa.jpg",
         badges: ["Novo"],
         descricao: "Nesta obra fundamental, Bàbá Akindele conduz o leitor a uma jornada pelo universo dos Òrìṣà, revelando de forma clara e acessível os fundamentos, ritos e histórias que sustentam o Candomblé. Mais do que um livro, trata-se de um guia espiritual e cultural que conecta tradição, ancestralidade e resistência. O autor apresenta desde os princípios da religião, a cosmologia yorùbá e os Irúnmòlè, até os mitos da criação, a essência do Òrìṣà e a riqueza do panteão africano.",
@@ -248,13 +248,69 @@ const produtos = {
         linkEbook: "https://pay.hotmart.com/N102104557D",
         linkFisico: "https://pay.hotmart.com/D102104527M"
     },
+    "coletanea-cargos": {
+        titulo: "Aprendendo sobre os Cargos do Candomblé",
+        subtitulo: "Coletânea Ritos e Mistérios - Livro II",
+        preco: "R$ 29,99",
+        precoEbook: "R$ 29,99",
+        precoEbookOriginal: "R$ 54,99",
+        precoFisico: "R$ 79,99",
+        precoFisicoOriginal: "R$ 104,99",
+        imagem: "CARGOS.jpg",
+        badges: ["Novo"],
+        descricao: "Nesta obra, Bàbá Akindele apresenta em detalhes a hierarquia do Candomblé, revelando os fundamentos, responsabilidades e significados de cada cargo que sustenta o axé nos terreiros. Um guia essencial para compreender a Ordem, a Tradição e a Hierarquia (OTH), valorizando a importância coletiva na preservação dos Òrìṣà.",
+        destaques: [
+            "Explicação clara sobre os principais cargos do Candomblé",
+            "A função dos iniciados, ogãs, ekedis e sacerdotes",
+            "O valor da hierarquia para manter o axé da comunidade",
+            "A importância do respeito e da coletividade no culto"
+        ],
+        dados: {
+            "Autor": "Bàbá Akindele",
+            "Editora": "Yorùbá History Channel",
+            "Ano": "2025",
+            "Formato": "Digital (PDF) e livro fisico",
+            "Páginas": "90"
+        },
+        linkCompra: "https://pay.hotmart.com/I102128571H",
+        linkEbook: "https://pay.hotmart.com/I102128571H",
+        linkFisico: "https://pay.hotmart.com/N102123552G"
+    },
+    "coletanea-iyami": {
+        titulo: "Aprendendo sobre Ìyàmi",
+        subtitulo: "Coletânea Ritos e Mistérios - Livro III",
+        preco: "R$ 29,99",
+        precoEbook: "R$ 29,99",
+        precoEbookOriginal: "R$ 54,99",
+        precoFisico: "R$ 79,99",
+        precoFisicoOriginal: "R$ 104,99",
+        imagem: "IYAMI.jpg",
+        badges: ["Novo"],
+        descricao: "Bàbá Akindele conduz o leitor ao mistério de Ìyàmi, a Mãe Primordial da tradição iorubá, senhora da criação, da destruição e do equilíbrio entre o Àiyé (mundo visível) e o Òrun (mundo invisível). A obra percorre mitos, símbolos e práticas, revelando a presença das Ìyàmi nas religiões afro-brasileiras e sua ligação com outras divindades femininas.",
+        destaques: [
+            "Origem mítica e simbologia de Ìyàmi",
+            "Relação com Yemojá, Òṣun, Oyá e as mães ancestrais",
+            "O papel da Sociedade Gèlèdè e os rituais de veneração",
+            "O poder da energia feminina como força criadora e transformadora"
+        ],
+        dados: {
+            "Autor": "Bàbá Akindele",
+            "Editora": "Yorùbá History Channel",
+            "Ano": "2025",
+            "Formato": "Digital (PDF)",
+            "Páginas": "85"
+        },
+        linkCompra: "https://pay.hotmart.com/J102128572B",
+        linkEbook: "https://pay.hotmart.com/J102128572B",
+        linkFisico: "https://pay.hotmart.com/D102123551C"
+    },
     "combo-sagrado": {
         titulo: "Combo Sagrado",
         preco: "R$ 89,99",
         precoEbook: "R$ 89,99",
-        precoEbookOriginal: "R$ 99,97",
+        precoEbookOriginal: "R$ 174,97",
         precoFisico: "R$ 199,99",
-        precoFisicoOriginal: "R$ 229,97",
+        precoFisicoOriginal: "R$ 304,97",
         imagem: "combo.png",
         badges: [],
         descricao: "Uma seleção especial dos nossos livros mais procurados para quem deseja mergulhar no universo sagrado do Candomblé. Este combo inclui conhecimentos essenciais sobre língua, oráculo e folhas sagradas.",
@@ -268,7 +324,7 @@ const produtos = {
         dados: {
             "Livros Inclusos": "3 livros",
             "Valor Individual E-book": "R$ 99,97",
-            "Valor Individual Físico": "R$ 199,97",
+            "Valor Individual Físico": "R$ 229,97",
             "Formato": "Digital (PDF) / Físico",
             "Acesso": "Imediato / 5-10 dias úteis"
         },
@@ -280,9 +336,9 @@ const produtos = {
         titulo: "Combo 5 Livros",
         preco: "R$ 149,99",
         precoEbook: "R$ 149,99",
-        precoEbookOriginal: "R$ 209,95",
+        precoEbookOriginal: "R$ 274,95",
         precoFisico: "R$ 349,99",
-        precoFisicoOriginal: "R$ 429,95",
+        precoFisicoOriginal: "R$ 484,95",
         imagem: "combo_geral.png",
         badges: [],
         descricao: "A coleção completa de todos os nossos livros sobre tradições yorùbá e afro-brasileiras. Ideal para estudiosos, praticantes e todos que desejam conhecimento profundo sobre a cultura ancestral.",
@@ -298,7 +354,7 @@ const produtos = {
         dados: {
             "Livros Inclusos": "5 livros",
             "Valor Individual E-book": "R$ 159,95",
-            "Valor Individual Físico": "R$ 319,95",
+            "Valor Individual Físico": "R$ 379,95",
             "Formato": "Digital (PDF) / Físico",
             "Acesso": "Imediato / 5-10 dias úteis"
         },
@@ -310,9 +366,9 @@ const produtos = {
         titulo: "Combo Completo – 7 Livros de Sabedoria Yorùbá",
         preco: "R$ 269,99",
         precoEbook: "R$ 269,99",
-        precoEbookOriginal: "R$ 349,93",
+        precoEbookOriginal: "R$ 444,93",
         precoFisico: "R$ 549,99",
-        precoFisicoOriginal: "R$ 679,93",
+        precoFisicoOriginal: "R$ 754,93",
         imagem: "combo_7.png",
         badges: [],
         descricao: "Descubra a riqueza completa da tradição yorùbá com esta coleção definitiva de 7 livros, reunindo os ensinamentos mais essenciais da Yorùbá History Channel. Explore oráculos sagrados, a língua ritual, folhas sagradas, ritmos dos tambores e aprenda os fundamentos dos èbós e das comidas sagradas dos Òrìṣà.",
@@ -327,8 +383,8 @@ const produtos = {
         ],
         dados: {
             "Livros Inclusos": "7 livros completos",
-            "Valor Individual E-book": "R$ 349,93",
-            "Valor Individual Físico": "R$ 679,93",
+            "Valor Individual E-book": "R$ 279,93",
+            "Valor Individual Físico": "R$ 599,93",
             "Formato": "Digital (PDF) / Físico Premium",
             "Acesso": "Imediato / 5-10 dias úteis"
         },
@@ -340,9 +396,9 @@ const produtos = {
         titulo: "Combo Oráculo",
         preco: "R$ 59,99",
         precoEbook: "R$ 59,99",
-        precoEbookOriginal: "R$ 64,98",
+        precoEbookOriginal: "R$ 114,98",
         precoFisico: "R$ 119,99",
-        precoFisicoOriginal: "R$ 154,98",
+        precoFisicoOriginal: "R$ 204,98",
         imagem: "combo_oraculo.png",
         badges: [],
         descricao: "Focado nos sistemas oraculares tradicionais, este combo é perfeito para quem quer aprender sobre Obì e Èrìndílógún. Conhecimento profundo sobre as artes divinatórias yorùbá.",
@@ -356,7 +412,7 @@ const produtos = {
         dados: {
             "Livros Inclusos": "2 livros",
             "Valor Individual E-book": "R$ 64,98",
-            "Valor Individual Físico": "R$ 124,98",
+            "Valor Individual Físico": "R$ 154,98",
             "Formato": "Digital (PDF) / Físico",
             "Acesso": "Imediato / 5-10 dias úteis"
         },
@@ -368,9 +424,9 @@ const produtos = {
         titulo: "Combo Oferendas – Èbós e Òunjẹ́ dos Òrìṣà",
         preco: "R$ 99,99",
         precoEbook: "R$ 99,99",
-        precoEbookOriginal: "R$ 129,98",
+        precoEbookOriginal: "R$ 169,98",
         precoFisico: "R$ 199,99",
-        precoFisicoOriginal: "R$ 239,98",
+        precoFisicoOriginal: "R$ 269,98",
         imagem: "combo_adimu.png",
         badges: [],
         descricao: "Descubra os segredos das oferendas e da culinária ritual com este combo especial, reunindo os dois livros essenciais para a prática sagrada dos Òrìṣà. Aprenda a realizar èbós corretamente e prepare comidas sagradas que carregam o axé necessário.",
@@ -384,14 +440,44 @@ const produtos = {
         ],
         dados: {
             "Livros Inclusos": "2 livros especializados",
-            "Valor Individual E-book": "R$ 129,98",
-            "Valor Individual Físico": "R$ 239,98",
+            "Valor Individual E-book": "R$ 119,98",
+            "Valor Individual Físico": "R$ 219,98",
             "Formato": "Digital (PDF) / Físico",
             "Acesso": "Imediato / 5-10 dias úteis"
         },
         linkCompra: "https://pay.hotmart.com/Q101946674H",
         linkEbook: "https://pay.hotmart.com/Q101946674H",
         linkFisico: "https://pay.hotmart.com/A101946669X"
+    },
+    "combo-ritos": {
+        titulo: "Combo Ritos e Mistérios",
+        preco: "R$ 89,99",
+        precoEbook: "R$ 89,99",
+        precoEbookOriginal: "R$ 174,97",
+        precoFisico: "R$ 249,99",
+        precoFisicoOriginal: "R$ 324,97",
+        imagem: "ritos3.jpg",
+        badges: ["Coleção Completa"],
+        descricao: "Este kit reúne três obras essenciais de Bàbá Akindele:\n1️⃣ Aprendendo sobre os Òrìṣà – fundamentos, histórias e características das divindades.\n2️⃣ Aprendendo sobre os Cargos do Candomblé – a hierarquia e funções que sustentam o axé.\n3️⃣ Aprendendo sobre Ìyàmi – o poder ancestral feminino e seus mistérios.\n\nUm conjunto indispensável para quem deseja compreender em profundidade a tradição yorùbá e o Candomblé.",
+        destaques: [
+            "Coleção completa com 3 volumes essenciais",
+            "Fundamentos completos da tradição yorùbá",
+            "Hierarquia e organização dos terreiros",
+            "Mistérios das Ìyàmi e poder feminino ancestral"
+        ],
+        dados: {
+            "Autor": "Bàbá Akindele",
+            "Editora": "Yorùbá History Channel",
+            "Ano": "2025",
+            "Formato": "Digital (PDF) / Físico",
+            "Volumes": "3 livros",
+            "Total de Páginas": "325",
+            "Valor Individual E-book": "R$ 94,97",
+            "Valor Individual Físico": "R$ 259,97"
+        },
+        linkCompra: "https://pay.hotmart.com/O102128602Y",
+        linkEbook: "https://pay.hotmart.com/O102128602Y",
+        linkFisico: "https://pay.hotmart.com/D102128714G"
     },
     "combo-personalizado": {
         titulo: "Combo Personalizado",
@@ -793,6 +879,18 @@ const livrosDisponiveis = {
         precoEbook: 44.99,
         precoFisico: 109.99
     },
+    "coletanea-cargos": {
+        nome: "Coletânea Ritos e Mistérios - Livro II",
+        imagem: "CARGOS.jpg",
+        precoEbook: 29.99,
+        precoFisico: 79.99
+    },
+    "coletanea-iyami": {
+        nome: "Coletânea Ritos e Mistérios - Livro III",
+        imagem: "IYAMI.jpg",
+        precoEbook: 29.99,
+        precoFisico: 79.99
+    },
     ewe: {
         nome: "Èwé Òró I",
         imagem: "livro_eweoro.png",
@@ -811,7 +909,7 @@ const livrosDisponiveis = {
         precoEbook: 44.99,
         precoFisico: 94.99
     },
-    ebos: {
+    "livro-ebos": {
         nome: "O Livro dos Èbós",
         imagem: "livro_ebos.jpg",
         precoEbook: 79.99,
@@ -835,22 +933,32 @@ const livrosDisponiveis = {
 let formatoSelecionado = 'ebook';
 let livrosSelecionados = [];
 
-// Função para calcular desconto progressivo
-function calcularDescontoProgressivo(quantidadeLivros) {
+// Função para calcular desconto tipo 1 (R$ 15 por livro)
+function calcularDescontoFixo(quantidadeLivros) {
+    return quantidadeLivros * 15; // R$ 15 por livro
+}
+
+// Função para calcular desconto percentual escalonado
+function calcularDescontoPercentual(quantidadeLivros) {
     if (quantidadeLivros >= 10) return 0.20; // 20% para 10+ livros
     if (quantidadeLivros >= 6) return 0.15; // 15% para 6-9 livros
     if (quantidadeLivros >= 3) return 0.10; // 10% para 3-5 livros
-    if (quantidadeLivros >= 2) return 0.05; // 5% para 2 livros
-    return 0; // Sem desconto para 1 livro
+    if (quantidadeLivros >= 1) return 0.05; // 5% para 1-2 livros
+    return 0;
 }
 
 // Função para obter texto do desconto
-function obterTextoDesconto(quantidadeLivros) {
+function obterTextoDescontoPercentual(quantidadeLivros) {
     if (quantidadeLivros >= 10) return "20%";
     if (quantidadeLivros >= 6) return "15%";
     if (quantidadeLivros >= 3) return "10%";
-    if (quantidadeLivros >= 2) return "5%";
+    if (quantidadeLivros >= 1) return "5%";
     return "0%";
+}
+
+// Função compatível para obter texto do desconto (mantida para compatibilidade)
+function obterTextoDesconto(quantidadeLivros) {
+    return obterTextoDescontoPercentual(quantidadeLivros);
 }
 
 // Função para inicializar o configurador
@@ -1013,21 +1121,24 @@ function atualizarResumo() {
         `;
     }).join('');
     
-    // Calcular desconto progressivo
-    const percentualDesconto = calcularDescontoProgressivo(livrosSelecionados.length);
-    const desconto = subtotal * percentualDesconto;
-    const total = subtotal - desconto;
+    // Calcular ambos os descontos (fixo + percentual)
+    const descontoFixo = calcularDescontoFixo(livrosSelecionados.length);
+    const percentualDesconto = calcularDescontoPercentual(livrosSelecionados.length);
+    const descontoPercentual = subtotal * percentualDesconto;
+    const descontoTotal = descontoFixo + descontoPercentual;
+    
+    const total = subtotal - descontoTotal;
     
     // Atualizar DOM
     resumoItens.innerHTML = itensHtml;
     subtotalValor.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
     
-    // Mostrar desconto com percentual
-    const textoDesconto = obterTextoDesconto(livrosSelecionados.length);
-    if (percentualDesconto > 0) {
-        descontoValor.textContent = `- R$ ${desconto.toFixed(2).replace('.', ',')} (${textoDesconto})`;
+    // Mostrar desconto total com breakdown
+    if (descontoTotal > 0) {
+        const textoPercentual = obterTextoDescontoPercentual(livrosSelecionados.length);
+        descontoValor.textContent = `- R$ ${descontoTotal.toFixed(2).replace('.', ',')} (R$15/livro + ${textoPercentual})`;
     } else {
-        descontoValor.textContent = `R$ 0,00 (Desconto a partir de 2 livros)`;
+        descontoValor.textContent = `R$ 0,00 (R$15/livro + 1+:5% | 2+:10% | 3+:15% | 10+:20%)`;
     }
     
     totalFinal.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
@@ -1035,7 +1146,7 @@ function atualizarResumo() {
     
     // Atualizar evento do botão único
     btnSolicitar.onclick = function() {
-        enviarPedidoCompletoPersonalizado(subtotal, desconto, total, percentualDesconto);
+        enviarPedidoCompletoPersonalizado(subtotal, descontoTotal, total, percentualDesconto);
     };
 }
 
@@ -1161,26 +1272,30 @@ let configuradorPersonalizadoEstado = {
     livrosSelecionados: new Set(),
     precos: {
         ebook: {
-            'yoruba': 49.99,
-            'obi': 39.99,
-            'coletanea-orisa': 44.99,
-            'ewe': 39.99,
-            'ilu': 34.99,
-            'odu': 44.99,
-            'ebos': 79.99,
-            'ounje': 59.99,
-            'oruko-nomes': 39.99
+            'yoruba': 64.99,
+            'obi': 54.99,
+            'coletanea-orisa': 59.99,
+            'coletanea-cargos': 54.99,
+            'coletanea-iyami': 54.99,
+            'ewe': 54.99,
+            'ilu': 49.99,
+            'odu': 59.99,
+            'livro-ebos': 94.99,
+            'ounje': 74.99,
+            'oruko-nomes': 54.99
         },
         fisico: {
-            'yoruba': 99.99,
-            'obi': 79.99,
-            'coletanea-orisa': 109.99,
-            'ewe': 79.99,
-            'ilu': 74.99,
-            'odu': 94.99,
-            'ebos': 129.99,
-            'ounje': 109.99,
-            'oruko-nomes': 89.99
+            'yoruba': 114.99,
+            'obi': 94.99,
+            'coletanea-orisa': 124.99,
+            'coletanea-cargos': 104.99,
+            'coletanea-iyami': 104.99,
+            'ewe': 94.99,
+            'ilu': 89.99,
+            'odu': 109.99,
+            'livro-ebos': 144.99,
+            'ounje': 124.99,
+            'oruko-nomes': 104.99
         }
     }
 };
@@ -1379,19 +1494,23 @@ function atualizarResumoPersonalizado() {
         subtotal += configuradorPersonalizadoEstado.precos[formato][livroId];
     });
     
-    const desconto = calcularDescontoProgressivo(quantidade);
-    const valorDesconto = subtotal * desconto;
-    const total = subtotal - valorDesconto;
+    // Calcular ambos os descontos (fixo + percentual)
+    const descontoFixo = calcularDescontoFixo(quantidade);
+    const percentualDesconto = calcularDescontoPercentual(quantidade);
+    const descontoPercentual = subtotal * percentualDesconto;
+    const valorDescontoTotal = descontoFixo + descontoPercentual;
+    const total = subtotal - valorDescontoTotal;
     
     // Atualizar valores na interface
     document.getElementById('quantidade-personalizado').textContent = `${quantidade} ${quantidade === 1 ? 'livro' : 'livros'}`;
     document.getElementById('subtotal-personalizado').textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
     
     const linhaDesconto = document.getElementById('desconto-linha-personalizado');
-    if (desconto > 0) {
+    if (valorDescontoTotal > 0) {
         linhaDesconto.style.display = 'flex';
-        document.getElementById('desconto-percentual-personalizado').textContent = `(${Math.round(desconto * 100)}%)`;
-        document.getElementById('desconto-personalizado').textContent = `-R$ ${valorDesconto.toFixed(2).replace('.', ',')}`;
+        const textoPercentual = obterTextoDescontoPercentual(quantidade);
+        document.getElementById('desconto-percentual-personalizado').textContent = `Desconto fixo + (${textoPercentual})`;
+        document.getElementById('desconto-personalizado').textContent = `-R$ ${valorDescontoTotal.toFixed(2).replace('.', ',')}`;
     } else {
         linhaDesconto.style.display = 'none';
     }

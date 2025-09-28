@@ -838,12 +838,36 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
+    flex-direction: column;
+    gap: 2px;
     width: 100%;
     text-align: center;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     position: relative;
     overflow: hidden;
+}
+
+/* Estilo para botões com duas linhas */
+.btn-comprar .btn-linha1 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-comprar .btn-linha2 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    opacity: 0.95;
+}
+
+.btn-comprar i {
+    margin-bottom: 2px;
+    font-size: 1rem;
 }
 
 .btn-comprar::before {
@@ -2414,6 +2438,98 @@ input:focus {
     font-weight: bold;
 }
 
+/* Seção de Tipo de Desconto */
+.tipo-desconto-section {
+    margin-bottom: 2rem;
+}
+
+.tipo-desconto-section h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.tipo-desconto-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tipo-desconto-card {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tipo-desconto-card:hover {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.tipo-desconto-card.selected {
+    border-color: #059669;
+    background: #d1fae5;
+}
+
+.tipo-desconto-icon {
+    font-size: 1.8rem;
+}
+
+.tipo-desconto-info h4 {
+    margin: 0 0 3px 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.tipo-desconto-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.tipo-desconto-check {
+    margin-left: auto;
+}
+
+.tipo-desconto-check input {
+    display: none;
+}
+
+.tipo-desconto-card .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tipo-desconto-card.selected .checkmark {
+    border-color: #059669;
+    background: #059669;
+}
+
+.tipo-desconto-card.selected .checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 /* Layout principal - similar ao modal-top-section */
 .configurador-personalizado-layout {
     display: grid;
@@ -2633,6 +2749,7 @@ input:focus {
 .desconto-linha {
     color: #dc2626;
     font-weight: 500;
+    font-size: 0.8rem;
 }
 
 .total-linha {
@@ -3533,5 +3650,81 @@ input:focus {
     
     .podcast-content h3 {
         font-size: 1.5rem;
+    }
+}
+
+/* === SEÇÃO COLEÇÃO RITOS E MISTÉRIOS === */
+.colecao-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.colecao-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37 0%, #f4e4bc 50%, #d4af37 100%);
+    opacity: 0.7;
+}
+
+.colecao-card {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.colecao-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+    border-color: #d4af37;
+}
+
+.produto-subtitulo {
+    font-size: 0.8rem;
+    color: #d4af37;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.colecao-card .produto-titulo {
+    color: #1a202c;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.produto-badge.colecao {
+    background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 100%);
+    color: #1a202c;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid #d4af37;
+}
+
+/* Responsividade da Seção Coleção */
+@media (max-width: 768px) {
+    .colecao-section {
+        padding: 2rem 0;
+    }
+    
+    .produto-subtitulo {
+        font-size: 0.7rem;
+    }
+    
+    .colecao-card .produto-titulo {
+        font-size: 1rem;
     }
 }
