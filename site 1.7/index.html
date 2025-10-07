@@ -10,20 +10,20 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>Yorùbá History Channel | Livros e Combos Espirituais</title>
-    <meta name="description" content="Descubra nossa coleção completa com livros de conhecimento ancestral Yorùbá, combos especiais e materiais espirituais do Bàbá Akindele. Coleção exclusiva de sabedoria milenar.">
+    <title>Yorùbá History Channel | Livros Sobre o Candomblé</title>
+    <meta name="description" content="Descubra nossa coleção completa de livros sobre o Candomblé, dicionários Yorùbá, combos especiais e conhecimento ancestral do Bàbá Akindele. Sabedoria tradicional dos Òrìṣà.">
     <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="apple-touch-icon" href="img/logo.png">
     <link rel="shortcut icon" href="img/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yorubahistorychannel.com.br/">
-    <meta property="og:title" content="Yorùbá History Channel | Livros e Combos Espirituais">
-    <meta property="og:description" content="Descubra nossa coleção completa com livros de conhecimento ancestral Yorùbá, combos especiais e materiais espirituais do Bàbá Akindele. Coleção exclusiva de sabedoria milenar.">
+    <meta property="og:title" content="Yorùbá History Channel | Livros Sobre o Candomblé">
+    <meta property="og:description" content="Descubra nossa coleção completa de livros sobre o Candomblé, dicionários Yorùbá, combos especiais e conhecimento ancestral do Bàbá Akindele. Sabedoria tradicional dos Òrìṣà.">
     <meta property="og:image" content="img/logo.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://yorubahistorychannel.com.br/">
-    <meta property="twitter:title" content="Yorùbá History Channel | Livros e Combos Espirituais">
-    <meta property="twitter:description" content="Descubra nossa coleção completa com livros de conhecimento ancestral Yorùbá, combos especiais e materiais espirituais do Bàbá Akindele. Coleção exclusiva de sabedoria milenar.">
+    <meta property="twitter:title" content="Yorùbá History Channel | Livros Sobre o Candomblé">
+    <meta property="twitter:description" content="Descubra nossa coleção completa de livros sobre o Candomblé, dicionários Yorùbá, combos especiais e conhecimento ancestral do Bàbá Akindele. Sabedoria tradicional dos Òrìṣà.">
     <meta property="twitter:image" content="img/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="vitrine-styles-new.css?v=20250917-configurador">
@@ -77,11 +77,11 @@
             <div class="welcome-body">
                 <div class="welcome-stats">
                     <div class="welcome-stat">
-                        <span class="welcome-stat-number">11</span>
+                        <span class="welcome-stat-number">13</span>
                         <span class="welcome-stat-label">Livros</span>
                     </div>
                     <div class="welcome-stat">
-                        <span class="welcome-stat-number">6</span>
+                        <span class="welcome-stat-number">7</span>
                         <span class="welcome-stat-label">Combos</span>
                     </div>
                     <div class="welcome-stat">
@@ -1276,15 +1276,10 @@
         
         // Abrir modal automaticamente ao carregar a página
         document.addEventListener('DOMContentLoaded', function() {
-            // Verifica se é a primeira visita (usando localStorage)
-            const jaVisitou = localStorage.getItem('yoruba-welcome-shown');
-            
-            if (!jaVisitou) {
-                setTimeout(() => {
-                    abrirModalBemVindo();
-                    localStorage.setItem('yoruba-welcome-shown', 'true');
-                }, 1000); // Abre após 1 segundo
-            }
+            // Modal sempre aparece quando a página é carregada/atualizada
+            setTimeout(() => {
+                abrirModalBemVindo();
+            }, 1000); // Abre após 1 segundo
         });
         
         // Fechar modal clicando fora dele

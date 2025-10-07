@@ -932,25 +932,11 @@ function fecharModal() {
 // Hero dinâmico
 function iniciarHeroDinamico() {
     const heroTitulo = document.querySelector('.titulo-principal');
-    const titulos = [
-        'Biblioteca Yorùbá',
-        'Conhecimento Ancestral',
-        'Sabedoria Milenar',
-        'Tradição Yorùbá'
-    ];
     
-    let index = 0;
-    
-    setInterval(() => {
-        if (heroTitulo) {
-            heroTitulo.style.opacity = '0';
-            setTimeout(() => {
-                index = (index + 1) % titulos.length;
-                heroTitulo.textContent = titulos[index];
-                heroTitulo.style.opacity = '1';
-            }, 500);
-        }
-    }, 3000);
+    // Definir título fixo
+    if (heroTitulo) {
+        heroTitulo.textContent = 'Biblioteca Yorùbá';
+    }
 }
 
 // Event listeners
